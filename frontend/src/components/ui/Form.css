@@ -1,0 +1,120 @@
+/* Form — component styles and colocated responsive rules. */
+
+input {
+  font: inherit;
+}
+
+select {
+  font: inherit;
+}
+
+textarea {
+  font: inherit;
+}
+
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d4e1ea;
+  background: white;
+  color: var(--navy);
+  border-radius: 9px;
+  margin-top: 8px;
+  font-weight: 400;
+  min-height: 46px;
+}
+
+select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d4e1ea;
+  background: white;
+  color: var(--navy);
+  border-radius: 9px;
+  margin-top: 8px;
+  font-weight: 400;
+  min-height: 46px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d4e1ea;
+  background: white;
+  color: var(--navy);
+  border-radius: 9px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+
+.form-card .back {
+  border: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.form-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.form-card h2 {
+  font-size: 25px;
+}
+
+.form-card > p[role="alert"] {
+  margin-top: 14px;
+  font-size: var(--small-font-size);
+  color: var(--blue);
+}
+
+.form-card p[role="status"] {
+  margin-top: 14px;
+  font-size: var(--small-font-size);
+  color: var(--blue);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .form-card h2 {
+    font-size: 28px;
+  }
+}
+
+input {
+  font-size: var(--button-font-size);
+}
+
+select {
+  font-size: var(--button-font-size);
+}
+
+textarea {
+  font-size: var(--button-font-size);
+}

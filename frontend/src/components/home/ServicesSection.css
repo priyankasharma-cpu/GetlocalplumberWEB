@@ -1,0 +1,22 @@
+/* ServicesSection — component styles and colocated responsive rules. */
+
+/* Responsive: (min-width: 1320px) */
+@media (min-width: 1320px) {
+  .service-grid.home-services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .service-grid.home-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Responsive: (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .service-grid.home-services {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

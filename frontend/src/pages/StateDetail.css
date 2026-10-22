@@ -1,0 +1,122 @@
+/* StateDetail — component styles and colocated responsive rules. */
+
+.state-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.state-service-grid > a {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: var(--small-font-size);
+  font-weight: 650;
+}
+
+.state-service-grid .feature-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+}
+
+.state-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 25px 0 38px;
+}
+
+.state-info-grid > div {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.state-info-grid small {
+  font-size: var(--small-font-size);
+  display: block;
+}
+
+.state-info-grid strong {
+  font-size: var(--small-font-size);
+  display: block;
+  margin-top: 7px;
+  color: var(--navy);
+}
+
+.city-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.city-chips button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: white;
+  font-size: var(--small-font-size);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .state-service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .state-info-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .state-info-grid > div {
+    padding: 20px;
+  }
+}
+
+.state-page .city-chips > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  font-size: var(--small-font-size);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: #4f718a;
+}
+
+.state-service-grid > a {
+  position: relative;
+}
+
+.state-service-grid > a > svg {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  color: #a4bbcc;
+}
+
+.state-cta {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px;
+  background: var(--light-blue);
+  border-radius: 15px;
+}
+
+.state-cta h3 {
+  font-size: 20px;
+  margin: 0;
+}

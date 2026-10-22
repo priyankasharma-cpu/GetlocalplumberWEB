@@ -1,0 +1,17 @@
+/* Shared foundations only. Components import their own colocated styles. */
+
+@import "tailwindcss" ;
+
+@import "./styles/variables.css" ;
+
+@import "./styles/global.css" ;
+
+@import "./styles/typography.css" ;
+
+@import "./styles/utilities.css" ;
+
+@import "./components/ui/Button.css" ;
+
+@import "./components/ui/Form.css" ;
+
+@import "./components/ui/EmptyState.css" ;

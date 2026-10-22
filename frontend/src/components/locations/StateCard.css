@@ -1,0 +1,42 @@
+.states-grid > a:where(.state-card) {
+  padding: 16px 13px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  transition: transform 0.2s,
+    border-color 0.2s;
+}
+
+.states-grid > a:where(.state-card):hover {
+  transform: translateY(-3px);
+  border-color: #74b3d8;
+}
+
+.states-grid :where(.state-card) strong {
+  font-size: var(--small-font-size);
+  flex: 1;
+}
+
+.states-grid :where(.state-card) .state-abbr {
+  font-size: var(--small-font-size);
+  color: #7b8fa1;
+  order: 2;
+}
+
+.states-grid :where(.state-card) svg {
+  display: none;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .states-grid :where(.state-card) strong {
+    font-size: var(--small-font-size);
+  }
+  .states-grid > a:where(.state-card) {
+    padding: 17px 15px;
+  }
+}

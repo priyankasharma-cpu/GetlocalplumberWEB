@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>CSS regression baseline</title><style>body{font:14px system-ui}iframe{position:absolute;left:-20000px;border:0;height:1000px}textarea{width:95%;height:300px}</style><h1>CSS computed-style regression</h1><p id="status">Running</p><textarea id="output" aria-label="Computed style snapshot"></textarea><script type="module">
+const routes=['/','/services?view=grid','/services?view=list','/services/drain-cleaning','/locations','/locations/alabama','/projects','/account','/contact'];
+const properties=['width','height','display','position','font-size','font-weight','line-height','letter-spacing','color','background-color','background-image','padding','margin','gap','border-radius','border-width','grid-template-columns','flex-direction','align-items','justify-content','min-height','max-width','box-shadow','object-fit'];
+const result={};
+const baseline=new URLSearchParams(location.search).get('mode')==='before';
+for(const width of [390,1440])for(const route of routes){
+ const frame=document.createElement('iframe');frame.width=width;frame.src=route;document.body.append(frame);await new Promise(r=>frame.onload=r);
+ for(let n=0;n<=1&&!frame.contentWindow.matchMedia(`(min-width: ${width}px)`).matches;n+=.25)frame.style.width=`${width+n}px`;
+ await new Promise(r=>setTimeout(r,1000));
+ const doc=frame.contentDocument;
+ if(baseline){doc.querySelectorAll('link[rel="stylesheet"],style').forEach(s=>s.remove());const css=doc.createElement('link');css.rel='stylesheet';css.href='/__baseline.css';doc.head.append(css);await new Promise(r=>css.onload=r);await new Promise(r=>setTimeout(r,350));}
+ await Promise.all([...doc.images].filter(i=>i.loading!=='lazy').map(i=>i.decode().catch(()=>{})));
+ result[width+' '+route]=[...doc.querySelectorAll('body *')].filter(e=>!['SCRIPT','STYLE','LINK','SVG','PATH','LINE','POLYLINE','CIRCLE','RECT'].includes(e.tagName.toUpperCase())).map(e=>{const c=getComputedStyle(e);return{tag:e.tagName,styles:Object.fromEntries(properties.map(p=>[p,c.getPropertyValue(p)]))};});
+ frame.remove();document.querySelector('#status').textContent='Checked '+width+' '+route;
+}
+document.querySelector('#output').value=JSON.stringify(result);document.querySelector('#status').textContent='Finished: 18 route/width snapshots';
+</script></html>

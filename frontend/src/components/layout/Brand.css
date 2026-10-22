@@ -1,0 +1,311 @@
+/* ==========================================
+   GETLOCALPLUMBER — PREMIUM BRAND
+   Reusable in Header and Footer
+========================================== */
+
+.brand {
+  --brand-navy: #082b4c;
+  --brand-blue: #0077b6;
+  --brand-orange: #f96a13;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 100%;
+  flex: 0 1 auto;
+  min-width: 0;
+
+  color: var(--brand-navy);
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.brand:focus-visible {
+  outline: 3px solid var(--brand-orange);
+  outline-offset: 5px;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   PREMIUM ICON CONTAINER
+========================================== */
+
+.brand-symbol {
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  width: 57px;
+  height: 57px;
+  flex-shrink: 0;
+
+  border-radius: 17px;
+
+  background: linear-gradient(145deg,
+      #ffffff 0%,
+      #eaf4fa 55%,
+      #d8edf9 100%);
+
+  border: 1px solid rgba(0, 119, 182, 0.16);
+
+  box-shadow:
+    0 5px 14px rgba(8, 43, 76, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  isolation: isolate;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.brand:hover .brand-symbol {
+  transform: rotate(-3deg);
+  box-shadow:
+    0 9px 22px rgba(0, 119, 182, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.brand-symbol-glow {
+  position: absolute;
+  inset: 6px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 70%);
+  z-index: -1;
+}
+
+.brand-house-icon {
+  color: var(--brand-blue);
+  filter: drop-shadow(0 2px 2px rgba(0, 119, 182, 0.1));
+}
+
+/* ==========================================
+   ORANGE WATER DROPLET
+========================================== */
+
+.brand-drop {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+
+  display: grid;
+  place-items: center;
+
+  width: 23px;
+  height: 23px;
+
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  color: var(--brand-orange);
+
+  box-shadow: 0 2px 7px rgba(8, 43, 76, 0.12);
+}
+
+.brand-drop svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ==========================================
+   BRAND WORDMARK
+========================================== */
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1;
+}
+
+.brand-name {
+  display: flex;
+  align-items: baseline;
+
+  font-size: clamp(19px, 1.8vw, 26px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.1px;
+}
+
+.brand-name-primary {
+  color: var(--brand-navy);
+}
+
+.brand-name-accent {
+  color: var(--brand-blue);
+}
+
+.brand-domain {
+  color: var(--brand-navy);
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: -0.6px;
+}
+
+/* ==========================================
+   TAGLINE
+========================================== */
+
+.brand-tagline {
+  display: block;
+  margin-top: 6px;
+
+  color: #6a8192;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 1.7px;
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (min-width: 1440px) {
+  .brand {
+    gap: 14px;
+  }
+
+  .brand-symbol {
+    width: 62px;
+    height: 62px;
+    border-radius: 19px;
+  }
+
+  .brand-house-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+  }
+
+  .brand-tagline {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .brand-symbol {
+    width: 54px;
+    height: 54px;
+  }
+
+  .brand-name {
+    font-size: 23px;
+  }
+
+  .brand-tagline {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-symbol {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .brand-house-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .brand-drop {
+    width: 19px;
+    height: 19px;
+    right: 4px;
+    bottom: 4px;
+  }
+
+  .brand-drop svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .brand-name {
+    font-size: clamp(16px, 4.3vw, 21px);
+    letter-spacing: -0.7px;
+  }
+
+  .brand-tagline {
+    margin-top: 4px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 359px) {
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-symbol {
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+  }
+
+  .brand-house-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+  }
+
+  .brand-tagline {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .brand,
+  .brand-symbol {
+    transition: none;
+  }
+
+  .brand:hover,
+  .brand:hover .brand-symbol {
+    transform: none;
+  }
+}

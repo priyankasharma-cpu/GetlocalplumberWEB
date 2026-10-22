@@ -1,0 +1,5 @@
+/* Directory root; card, list, grid and toggle styles are colocated with their components. */
+
+.services-directory {
+  display: block;
+}

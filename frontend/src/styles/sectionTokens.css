@@ -1,0 +1,7 @@
+/* sectionTokens — component styles and colocated responsive rules. */
+
+.section {
+  max-width: var(--container-width);
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}

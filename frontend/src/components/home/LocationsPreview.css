@@ -1,0 +1,93 @@
+/* LocationsPreview — component styles and colocated responsive rules. */
+
+:where(.locations-section) .locations-home {
+  display: grid;
+  gap: 20px;
+}
+
+:where(.locations-section) .location-feature {
+  background: var(--light-blue);
+  padding: 28px;
+  border-radius: 17px;
+}
+
+:where(.locations-section) .location-feature h3 {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+:where(.locations-section) .location-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+:where(.locations-section) .location-preview > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 10px;
+  padding: 17px 12px;
+  min-width: 0;
+}
+
+:where(.locations-section) .location-preview > a > span {
+  font-size: var(--small-font-size);
+  font-weight: 700;
+  color: var(--blue);
+}
+
+:where(.locations-section) .location-preview strong {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+}
+
+:where(.locations-section) .location-preview svg {
+  margin-left: auto;
+  width: 13px;
+}
+
+:where(.locations-section) .location-preview .all-states-link {
+  grid-column: span 2;
+  background: var(--navy);
+  color: #fff;
+  font-size: var(--small-font-size);
+  justify-content: space-between;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :where(.locations-section) .locations-home {
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: 25px;
+  }
+  :where(.locations-section) .location-preview {
+    align-content: stretch;
+  }
+  :where(.locations-section) .location-preview > a {
+    padding: 19px;
+  }
+  :where(.locations-section) .location-preview strong {
+    font-size: var(--small-font-size);
+  }
+  :where(.locations-section) .location-preview > a > span {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  :where(.locations-section) .location-preview > a {
+    gap: 7px;
+    padding: 15px 10px;
+  }
+  :where(.locations-section) .location-preview strong {
+    font-size: var(--small-font-size);
+  }
+}
+
+:where(.locations-section) .location-feature p {
+  font-size: var(--supporting-font-size);
+}

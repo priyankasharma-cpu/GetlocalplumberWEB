@@ -1,0 +1,38 @@
+/* EmptyState — component styles and colocated responsive rules. */
+
+.empty {
+  background: #fff;
+  border: 1px dashed #cbdde9;
+  border-radius: 18px;
+  min-height: 300px;
+  padding: 42px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty > svg {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.empty h2 {
+  font-size: 26px;
+}
+
+.empty p {
+  font-size: var(--small-font-size);
+}
+
+.empty-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  background: var(--light-blue);
+  color: var(--blue);
+  border-radius: 50%;
+  margin-bottom: 25px;
+}

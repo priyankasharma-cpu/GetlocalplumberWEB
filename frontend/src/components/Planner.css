@@ -1,0 +1,8 @@
+/* Planner — component styles and colocated responsive rules. */
+
+.planner-modal .planner-step-label {
+  font-size: var(--small-font-size);
+  color: #7a8d9d;
+  margin-bottom: 7px;
+  margin-top: 21px;
+}

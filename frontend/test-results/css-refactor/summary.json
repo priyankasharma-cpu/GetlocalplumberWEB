@@ -1,0 +1,20 @@
+{
+  "sourceStylesheets": 55,
+  "newSourceStylesheets": 52,
+  "modifiedOriginalStylesheets": [
+    "frontend/src/styles.css",
+    "frontend/src/styles/variables.css",
+    "frontend/src/styles/typography.css"
+  ],
+  "removedMonolith": "frontend/src/styles/globals.css",
+  "globalResetLines": 53,
+  "jsxMappings": 53,
+  "automatedTests": 23,
+  "responsiveCasesPassed": 147,
+  "computedPropertiesCompared": 105024,
+  "intentionalNavbarDifferences": 459,
+  "unexpectedDifferences": [],
+  "baselineScreenshots": 16,
+  "afterScreenshotCapture": "Browser screenshot API unavailable; visual comparison pending",
+  "newConsoleErrorsDuringInteractionChecks": 0
+}

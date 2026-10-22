@@ -1,0 +1,252 @@
+/* ServiceDetail — component styles and colocated responsive rules. */
+
+.detail-hero {
+  display: grid;
+  gap: 28px;
+}
+
+.detail-hero h1 {
+  font-size: clamp(34px, 5vw, 57px);
+}
+
+.detail-hero h1 span {
+  color: var(--blue);
+}
+
+.detail-content {
+  display: grid;
+  gap: 26px;
+  padding-top: 5px;
+}
+
+.detail-content h2 {
+  font-size: 26px;
+  margin-top: 28px;
+}
+
+.detail-content > div > h2:first-child {
+  margin-top: 0;
+}
+
+.detail-content aside {
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  align-self: start;
+}
+
+.detail-content aside h3 {
+  font-size: 22px;
+}
+
+.detail-content aside .button {
+  width: 100%;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .detail-hero {
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+  .detail-hero h1 {
+    font-size: 44px;
+  }
+  .detail-content {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+  }
+}
+
+/* Responsive: (min-width: 1100px) */
+@media (min-width: 1100px) {
+  .detail-hero h1 {
+    font-size: 54px;
+  }
+}
+
+.service-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.service-facts > div {
+  background: white;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.service-facts small {
+  display: block;
+  font-size: var(--small-font-size);
+}
+
+.service-facts strong {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--navy);
+  line-height: 1.5;
+  margin-top: 7px;
+}
+
+.detail-content > .estimator {
+  align-self: start;
+}
+
+.before-call {
+  padding: 23px;
+  background: var(--light-blue);
+  border-radius: 13px;
+  margin-top: 25px;
+}
+
+.before-call h3 {
+  font-size: 19px;
+}
+
+.service-call-process {
+  margin: 15px 20px;
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 30px 24px;
+  color: #fff;
+  display: grid;
+  gap: 25px;
+}
+
+.service-call-process h2 {
+  color: white;
+}
+
+.service-call-process .eyebrow {
+  color: #78c0e9;
+}
+
+.service-call-process p {
+  color: #bdd1df;
+}
+
+.service-call-process > img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.call-process-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.call-process-steps > div {
+  background: #ffffff0b;
+  border: 1px solid #ffffff10;
+  padding: 16px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  gap: 4px 12px;
+}
+
+.call-process-steps > div > span {
+  grid-row: span 2;
+  background: var(--accent-orange);
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: var(--small-font-size);
+}
+
+.call-process-steps strong {
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+}
+
+.call-process-steps small {
+  color: #abc6da;
+  font-size: var(--small-font-size);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .service-facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 0;
+  }
+  .service-facts > div {
+    padding: 19px;
+  }
+  .service-facts strong {
+    font-size: var(--small-font-size);
+  }
+  .service-call-process {
+    margin: 15px 30px 0;
+    grid-template-columns: 1.65fr 1fr;
+    padding: 35px;
+    gap: 30px;
+    align-items: center;
+  }
+  .service-call-process > img {
+    height: 280px;
+  }
+  .call-process-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .call-process-steps > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  .call-process-steps strong {
+    font-size: var(--small-font-size);
+  }
+  .call-process-steps small {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* Responsive: (min-width: 1320px) */
+@media (min-width: 1320px) {
+  .service-call-process {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1220px;
+    padding: 40px;
+    gap: 40px;
+  }
+  .service-facts {
+    padding-bottom: 35px;
+  }
+  .service-facts strong {
+    font-size: var(--supporting-font-size);
+  }
+}
+
+.detail-hero .lead {
+  font-size: var(--body-font-size);
+}
+
+.detail-content p {
+  font-size: var(--supporting-font-size);
+}
+
+.before-call p {
+  font-size: var(--supporting-font-size);
+}
+
+.service-call-process p {
+  font-size: var(--supporting-font-size);
+}
+
+.detail-final-call { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }

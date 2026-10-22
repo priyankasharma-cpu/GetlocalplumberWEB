@@ -1,0 +1,30 @@
+{
+  "tool": "Built-in imagegen",
+  "usage": "Illustrative plumbing photography; not actual employees or documented customer jobs. Replacement files stay in the existing 24 service image folders.",
+  "prompts": [
+    {
+      "representativeAsset": "services/drain-cleaning/main.webp",
+      "prompt": "Premium editorial horizontal plumbing service photograph, close-up of a professional plumber wearing navy sleeves using a drain auger beside a residential stainless kitchen sink in a bright American home, natural daylight, realistic equipment and anatomy, clean light blue and white interior, no text, logos or watermarks. Wide 3:2 crop, actual image not a UI."
+    },
+    {
+      "representativeAsset": "services/water-heater-repair/main.webp",
+      "prompt": "Premium editorial horizontal plumbing service photograph of a professional plumber in navy workwear inspecting a residential tank water heater in a tidy American utility room, copper pipe connections and professional tools, natural light, photorealistic, no text, logos or watermarks. Wide 3:2 crop, actual image not a UI."
+    },
+    {
+      "representativeAsset": "services/toilet-repair/main.webp",
+      "prompt": "Premium editorial horizontal plumbing service photograph of a white residential toilet and a navy-sleeved professional plumber replacing the supply valve nearby, modern American bathroom, white tile, blue accent, realistic plumbing fittings, natural daylight, no text logos or watermarks. Wide 3:2 crop, actual image not a UI."
+    },
+    {
+      "representativeAsset": "services/faucet-repair/main.webp",
+      "prompt": "Photorealistic premium editorial plumbing photograph, close-up of a modern chrome faucet with a drop of water above a white ceramic sink, navy-sleeved plumber's hand adjusting faucet connection, beautiful bright American residential bathroom, light blue accents, natural light. Horizontal 3:2. No text logos graphics or watermarks."
+    },
+    {
+      "representativeAsset": "services/pipe-repair/main.webp",
+      "prompt": "Photorealistic premium editorial plumbing photograph of copper water supply pipes and clean white PVC drain pipes inside an open American residential kitchen cabinet, professional plumber in navy sleeves working with a realistic adjustable wrench, natural light, horizontal 3:2 composition. No text logos graphics or watermarks."
+    },
+    {
+      "representativeAsset": "services/plumbing-inspections/main.webp",
+      "prompt": "Photorealistic premium editorial plumbing photograph of an adult professional plumber in navy workwear using a small inspection camera and tablet while checking exposed residential basement water pipes, bright tidy American home, professional credible equipment, natural lighting, horizontal 3:2 composition. No text logos graphics or watermarks."
+    }
+  ]
+}

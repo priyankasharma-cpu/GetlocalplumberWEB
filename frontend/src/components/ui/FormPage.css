@@ -1,0 +1,30 @@
+/* Account — component styles and colocated responsive rules. */
+
+.form-page {
+  display: grid;
+  gap: 25px;
+}
+
+.form-page h1 {
+  font-size: clamp(36px, 5vw, 60px);
+}
+
+.form-page > .form-card {
+  padding: 28px 23px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .form-page {
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    min-height: 620px;
+  }
+  .form-page > .form-card {
+    padding: 35px;
+  }
+  .form-page h1 {
+    font-size: 52px;
+  }
+}

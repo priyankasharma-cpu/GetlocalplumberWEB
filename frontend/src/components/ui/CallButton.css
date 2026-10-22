@@ -1,0 +1,129 @@
+/* CallButton — component styles and colocated responsive rules. */
+
+.call-icon svg {
+  animation: phone-ring 5s 1s infinite;
+}
+
+.call {
+  padding: 8px 15px 8px 9px;
+  justify-content: flex-start;
+  gap: 12px;
+  box-shadow: 0 7px 20px #f96a1320;
+}
+
+.call-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.call-copy {
+  display: block;
+  text-align: left;
+  flex: 1;
+}
+
+.call-copy strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.25px;
+}
+
+.call-copy small {
+  display: block;
+  color: #fff0e6;
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+.call.prominent {
+  width: 100%;
+  min-height: 65px;
+}
+
+.call.prominent .call-icon {
+  width: 43px;
+  height: 43px;
+}
+
+.call.prominent .call-copy strong {
+  font-size: clamp(14px, 4.2vw, 20px);
+}
+
+.call.compact {
+  min-height: 42px;
+  padding: 6px 13px 6px 6px;
+  gap: 8px;
+  box-shadow: none;
+}
+
+.call.compact .call-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.call.compact .call-copy strong {
+  font-size: var(--small-font-size);
+}
+
+/* Responsive: (min-width: 480px) */
+@media (min-width: 480px) {
+  .call.prominent .call-copy strong {
+    font-size: 20px;
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  .call.prominent .call-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.call-copy strong {
+  overflow-wrap: anywhere;
+}
+
+.call-copy {
+  min-width: 0;
+}
+
+/* Compact placements retain the complete number in their accessible name. */
+.call-short-label { display: none; font-weight: 650; }
+.call.compact .call-copy small { display: none; }
+.call--service-card .call-copy { flex: initial; }
+.call--service-card .call-number { white-space: nowrap; }
+.call--service-list .call-copy small { font-size: 12px; }
+.call--service-list > svg { display: none; }
+.call--service-list { min-height: 44px; }
+
+.call-icon::after {
+  content: ""; position: absolute; inset: -3px; border: 1px solid currentColor;
+  border-radius: inherit; pointer-events: none; animation: call-ripple 5s ease-out infinite;
+}
+@media (max-width: 599px), (min-width: 1024px) and (max-width: 1199px) {
+  .call--service-card .call-number { display: none; }
+  .call--service-card .call-short-label { display: block; }
+}
+@media (max-width: 1439px) {
+  .call--header .call-number { display: none; }
+  .call--header .call-short-label { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .call-icon svg, .call-icon::after { animation: none; }
+}
+
+.call--service-card .call-short-label { display: block; font-size: 12px; }
+@media (max-width: 599px), (min-width: 1024px) and (max-width: 1199px) {
+  .call--service-card.compact .call-short-label { font-size: 14px; }
+}

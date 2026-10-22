@@ -1,0 +1,28 @@
+/* ViewToggle — component styles and colocated responsive rules. */
+
+.segmented {
+  display: flex;
+  padding: 4px;
+  background: #e8f1f8;
+  border-radius: 999px;
+  gap: 4px;
+}
+
+.segmented button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: none;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: var(--small-font-size);
+  color: #698095;
+  min-height: 38px;
+}
+
+.segmented .selected {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 2px 8px #082b4c0a;
+}

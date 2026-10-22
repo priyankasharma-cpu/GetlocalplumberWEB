@@ -1,0 +1,12 @@
+/* App — component styles and colocated responsive rules. */
+
+#site-shell {
+  padding-bottom: calc(77px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  #site-shell {
+    padding-bottom: 0;
+  }
+}

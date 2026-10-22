@@ -1,0 +1,24 @@
+/* Locations — component styles and colocated responsive rules. */
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 26px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .states-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+.directory-note {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  font-size: var(--small-font-size);
+  margin-top: 26px;
+}

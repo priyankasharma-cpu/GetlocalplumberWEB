@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Responsive layout checks</title><style>body{font:14px system-ui;padding:24px;color:#143344}li{padding:5px}iframe{position:absolute;left:-10000px;border:0;height:1000px}</style><h1>Responsive layout checks</h1><p>Checking public pages and dashboard at all 11 required widths.</p><ol id="results"></ol><p id="status" role="status">Running…</p><script type="module">
+const widths=[320,360,375,390,412,430,480,768,1024,1440,1920];
+const routes=['/','/services?view=grid','/services?view=list','/services/drain-cleaning','/locations','/locations/alabama','/projects','/account','/contact'];
+let failures=0;
+const cases=widths.flatMap(width=>routes.map(route=>({width,route})));
+const serviceRoutes=await fetch('/__services').then(r=>r.json());
+for(const width of [390,1440])for(const route of serviceRoutes)cases.push({width,route});
+for(const {width,route} of cases){
+  const frame=document.createElement('iframe');frame.width=width;frame.title=`${route} at ${width}px`;frame.src=route;document.body.append(frame);
+  await new Promise(resolve=>frame.onload=resolve);
+  // Fractional browser zoom can round an iframe just below its requested breakpoint.
+  // Nudge by subpixels until its CSS media viewport reaches the requested width.
+  for(let adjustment=0;adjustment<=1&&!frame.contentWindow.matchMedia(`(min-width: ${width}px)`).matches;adjustment+=.25)frame.style.width=`${width+adjustment}px`;
+  await new Promise(resolve=>setTimeout(resolve,300));
+  const doc=frame.contentDocument;
+  const overflow=doc.documentElement.scrollWidth>doc.documentElement.clientWidth+1;
+  const heading=doc.querySelector('h1');
+  const nav=doc.querySelector('.mobile-bottom-nav');
+  const navOk=nav&&getComputedStyle(nav).display===(width<768?'grid':'none')&&nav.querySelectorAll('a').length===5;
+  const brokenImages=[...doc.images].filter(i=>i.complete&&!i.naturalWidth);
+  const grid=doc.querySelector('main .service-grid');
+  const columns=grid?getComputedStyle(grid).gridTemplateColumns.split(' ').length:null;
+  const gridOk=!grid||columns===(width>=1024?4:2);
+  const navLinks=[...doc.querySelectorAll('.desktop-nav > a, .services-nav > a')];
+  const fontOk=navLinks.every(a=>getComputedStyle(a).fontSize==='15px');
+  const header=doc.querySelector('header');
+  const headerChildren=[...header.children].filter(el=>getComputedStyle(el).display!=='none'&&getComputedStyle(el).position!=='absolute');
+  const rects=headerChildren.map(el=>el.getBoundingClientRect());
+  const headerOk=rects.every((r,i)=>!i||r.left>=rects[i-1].right-1);
+  const telLinks=[...doc.querySelectorAll('a[href^="tel:"]')];
+  const callOk=telLinks.length>0&&telLinks.every(a=>a.getAttribute('href')==='tel:+18336998912'&&a.getAttribute('aria-label')?.includes('+1 (833) 699-8912'));
+  const cards=[...doc.querySelectorAll('main .service-card')];
+  const cardCallsOk=cards.every(card=>card.querySelectorAll('a[href="tel:+18336998912"]').length===1&&card.querySelector('.learn-link'));
+  const directoryOk=!route.startsWith("/services?")||cards.length===24;
+  const detailOk=!route.startsWith("/services/")||doc.querySelectorAll("main > section > .call, main .hero-actions > .call").length>=3;
+  const nested=doc.querySelector('a a, a button, button a');
+  const ok=directoryOk&&detailOk&&callOk&&cardCallsOk&&!nested&&!overflow&&!!heading&&navOk&&!brokenImages.length&&gridOk&&fontOk&&headerOk;
+  failures+=!ok;
+  const item=document.createElement('li');item.textContent=`${ok?'PASS':'FAIL'} ${width}px ${route} — document width ${doc.documentElement.scrollWidth}px; nav ${navOk?'OK':'FAIL'}; images ${brokenImages.length?'FAIL':'OK'}; grid ${columns??'n/a'} ${gridOk?'OK':'FAIL'}; nav font ${fontOk?'15px':'FAIL '+[...new Set(navLinks.map(a=>getComputedStyle(a).fontSize))].join(',')}; header ${headerOk?'OK':'OVERLAP'}; calls ${callOk&&cardCallsOk?'OK':'FAIL'}; nesting ${nested?'FAIL':'OK'}`;item.style.color=ok?'#0077b6':'#b42b31';document.querySelector('#results').append(item);frame.remove();
+}
+document.querySelector('#status').textContent=`Finished: ${cases.length-failures}/${cases.length} passed; ${failures} failures.`;
+</script></html>
+

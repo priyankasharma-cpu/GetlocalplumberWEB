@@ -1,0 +1,78 @@
+/* EmergencyCTA — component styles and colocated responsive rules. */
+
+.emergency {
+  background: linear-gradient(110deg, #082b4c, #0c3d62);
+  padding: 40px 24px;
+  margin: 0 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.emergency:after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 300px;
+  height: 300px;
+  border: 40px solid #ffffff03;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.emergency .eyebrow {
+  color: #71bbe4;
+}
+
+.emergency h2 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.emergency p {
+  color: #bcd3e3;
+  max-width: 520px;
+}
+
+.emergency > div:last-child {
+  position: relative;
+  z-index: 1;
+}
+
+.emergency small {
+  display: block;
+  color: #aec6d7;
+  font-size: var(--small-font-size);
+  margin-top: 14px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .emergency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 48px max(30px, calc((100vw - 1220px) / 2));
+  }
+  .emergency h2 {
+    font-size: 35px;
+  }
+  .emergency > div:first-child {
+    max-width: 600px;
+  }
+  .emergency p {
+    margin-bottom: 0;
+  }
+  .emergency > div:last-child {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+  .emergency small {
+    font-size: var(--small-font-size);
+  }
+}
+
+.emergency p {
+  font-size: var(--supporting-font-size);
+}

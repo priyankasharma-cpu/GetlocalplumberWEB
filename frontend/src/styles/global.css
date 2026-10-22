@@ -1,0 +1,53 @@
+/* Global reset, defaults, and accessibility only. Component layouts live beside JSX. */
+:root {
+  font-family: var(--font-family-primary);
+  font-synthesis: none;
+  color: var(--dark-text);
+  background: var(--background);
+}
+
+* { box-sizing: border-box; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+button:disabled { opacity: 0.5; cursor: wait; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+img { display: block; max-width: 100%; }
+svg { flex-shrink: 0; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #0088ce;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 15px;
+  z-index: 200;
+  background: white;
+  padding: 15px;
+}
+.skip-link:focus { top: 10px; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { animation: none !important; transition: none !important; }
+}

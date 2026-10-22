@@ -1,0 +1,39 @@
+/* LocationButton — component styles and colocated responsive rules. */
+
+.location-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 10px 13px;
+  border: 1px solid #dce5ed;
+  background: white;
+  border-radius: 999px;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--navy);
+  max-width: 66%;
+}
+
+.location-button > span:first-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.location-chevron {
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  .location-button {
+    padding: 9px 11px;
+    font-size: var(--small-font-size);
+    gap: 5px;
+  }
+  .location-button svg {
+    width: 14px;
+  }
+}

@@ -1,0 +1,143 @@
+/* ProjectsPreview — component styles and colocated responsive rules. */
+
+.planning-banner {
+  display: grid;
+  gap: 26px;
+  background: #edf5fb;
+}
+
+:where(.planning-banner) .planning-preview {
+  padding: 22px;
+  background: #fff;
+  border-radius: 17px;
+  border: 1px solid #dae6ee;
+  box-shadow: 0 15px 30px #082b4c09;
+}
+
+:where(.planning-banner) .preview-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+:where(.planning-banner) .preview-header .feature-icon {
+  width: 38px;
+  height: 38px;
+}
+
+:where(.planning-banner) .preview-header strong {
+  font-size: var(--small-font-size);
+  display: block;
+}
+
+:where(.planning-banner) .preview-header small {
+  font-size: var(--small-font-size);
+  display: block;
+  margin-top: 3px;
+}
+
+:where(.planning-banner) .preview-status {
+  margin-left: auto;
+  background: var(--light-blue);
+  font-size: var(--small-font-size);
+  color: var(--blue);
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+
+:where(.planning-banner) .mini-progress {
+  display: flex;
+  gap: 5px;
+  margin: 25px 0 9px;
+}
+
+:where(.planning-banner) .mini-progress i {
+  height: 5px;
+  flex: 1;
+  background: #dce7ef;
+  border-radius: 5px;
+}
+
+:where(.planning-banner) .mini-progress i:first-child {
+  background: var(--blue);
+}
+
+:where(.planning-banner) .preview-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--small-font-size);
+  color: #718393;
+  margin-bottom: 24px;
+}
+
+:where(.planning-banner) .preview-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #edf2f6;
+  padding: 13px 0;
+  font-size: var(--small-font-size);
+  color: #3d5e76;
+}
+
+:where(.planning-banner) .preview-check svg {
+  color: var(--blue);
+}
+
+:where(.planning-banner) .preview-note {
+  font-size: var(--small-font-size);
+  color: #8b9aaa;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .planning-banner {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 30px;
+    padding: 38px;
+    max-width: 1220px;
+  }
+  :where(.planning-banner) .planning-preview {
+    padding: 28px;
+  }
+  :where(.planning-banner) .preview-header strong {
+    font-size: var(--small-font-size);
+  }
+  :where(.planning-banner) .preview-labels {
+    font-size: var(--small-font-size);
+  }
+  :where(.planning-banner) .preview-check {
+    font-size: var(--small-font-size);
+  }
+  :where(.planning-banner) .preview-status {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* Responsive: (min-width: 1100px) */
+@media (min-width: 1100px) {
+  .planning-banner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  :where(.planning-banner) .preview-header strong {
+    font-size: var(--small-font-size);
+  }
+  :where(.planning-banner) .preview-status {
+    font-size: var(--small-font-size);
+  }
+  :where(.planning-banner) .planning-preview {
+    padding: 18px;
+  }
+}
+
+.planning-banner p {
+  font-size: var(--supporting-font-size);
+}

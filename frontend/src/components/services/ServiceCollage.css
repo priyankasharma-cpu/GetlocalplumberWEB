@@ -1,0 +1,82 @@
+/* ServiceCollage — component styles and colocated responsive rules. */
+
+.collage {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+
+.collage > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  min-height: 0;
+}
+
+.collage-badge {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: var(--accent-orange);
+  border: 5px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  z-index: 1;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .collage {
+    gap: 12px;
+  }
+  .collage-badge {
+    top: 226px;
+  }
+}
+
+/* Responsive: (min-width: 1100px) */
+@media (min-width: 1100px) {
+  .collage {
+    grid-template-rows: 280px 170px;
+  }
+  .collage-badge {
+    top: 256px;
+  }
+}
+
+.collage {
+  grid-template-columns: 0.65fr 1fr;
+  grid-template-rows: 150px 150px;
+}
+
+.collage > *:first-child {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.collage > img:nth-child(2) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.collage > img:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.collage-badge {
+  grid-column: auto;
+  grid-row: auto;
+  left: calc(39.4% - 24px);
+  top: calc(50% - 24px);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .collage {
+    grid-template-rows: 205px 205px;
+  }
+}

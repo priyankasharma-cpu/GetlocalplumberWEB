@@ -1,0 +1,81 @@
+/* CallPlannerSteps — component styles and colocated responsive rules. */
+
+:where(.planner-modal) .progress {
+  display: flex;
+  gap: 4px;
+  margin: 22px 0 13px;
+}
+
+:where(.planner-modal) .progress span {
+  height: 5px;
+  background: #e3ebf2;
+  border-radius: 5px;
+  flex: 1;
+}
+
+:where(.planner-modal) .progress .done {
+  background: var(--blue);
+}
+
+:where(.planner-modal) .progress .current {
+  background: var(--blue);
+}
+
+:where(.planner-modal) .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+:where(.planner-modal) .options button {
+  border: 1px solid #ccdce8;
+  background: #fff;
+  border-radius: 999px;
+  padding: 12px 15px;
+  font-size: var(--small-font-size);
+  color: var(--navy);
+  min-height: 43px;
+  line-height: 1.5;
+}
+
+:where(.planner-modal) .options button svg {
+  display: none;
+}
+
+:where(.planner-modal) .options button:hover {
+  border-color: var(--blue);
+  background: var(--light-blue);
+  box-shadow: 0 0 0 2px #0077b60c;
+}
+
+:where(.planner-modal) .options .chosen {
+  border-color: var(--blue);
+  background: var(--light-blue);
+  box-shadow: 0 0 0 2px #0077b60c;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :where(.planner-modal) .options button {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  :where(.planner-modal) .options button {
+    font-size: var(--small-font-size);
+    padding: 11px 13px;
+  }
+}
+
+.planner-modal .progress {
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+:where(.planner-modal) .planner-question {
+  font-size: 20px;
+  margin-bottom: 16px;
+}

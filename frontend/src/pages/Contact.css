@@ -1,0 +1,6 @@
+/* Contact — component styles and colocated responsive rules. */
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+}

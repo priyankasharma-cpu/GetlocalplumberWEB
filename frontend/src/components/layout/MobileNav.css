@@ -1,0 +1,91 @@
+/* MobileNav — component styles and colocated responsive rules. */
+
+.mobile-bottom-nav {
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  height: calc(77px + env(safe-area-inset-bottom, 0px));
+  padding: 7px 9px calc(6px + env(safe-area-inset-bottom, 0px));
+  background: #fff;
+  border-top: 1px solid #e5edf3;
+  box-shadow: 0 -7px 30px #082b4c0a;
+}
+
+.mobile-bottom-nav > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: var(--small-font-size);
+  font-weight: 550;
+  color: #617180;
+  position: relative;
+  min-width: 0;
+  transition: color 0.2s;
+}
+
+.mobile-bottom-nav > a svg {
+  stroke-width: 1.8;
+}
+
+.mobile-bottom-nav > a.active {
+  color: var(--blue);
+}
+
+.mobile-bottom-nav > a.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 16px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 5px;
+}
+
+.mobile-bottom-nav .bottom-call {
+  justify-content: end;
+}
+
+.bottom-call > span {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: var(--accent-orange);
+  color: white;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  top: -25px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 7px 21px #f96a133d;
+}
+
+.bottom-call small {
+  font-size: var(--small-font-size);
+  color: var(--navy);
+  padding-bottom: 6px;
+}
+
+.bottom-call svg {
+  animation: phone-ring 5s 1s infinite;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+.mobile-bottom-nav small {
+  font-size: 12px;
+}
+
+.mobile-bottom-nav > a:not(.bottom-call) > span {
+  font-size: 12px;
+}

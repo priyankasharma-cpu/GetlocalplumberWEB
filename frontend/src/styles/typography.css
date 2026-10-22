@@ -1,0 +1,79 @@
+/* typography — component styles and colocated responsive rules. */
+
+body {
+  margin: 0;
+}
+
+p {
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0 0 18px;
+  color: var(--navy);
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0 0 18px;
+  color: var(--navy);
+  overflow-wrap: break-word;
+}
+
+h3 {
+  font-weight: 750;
+  line-height: 1.12;
+  margin: 0 0 18px;
+  color: var(--navy);
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(33px, 5vw, 62px);
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+small {
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+label {
+  font-weight: 550;
+  display: block;
+  margin-bottom: 17px;
+  min-width: 0;
+  color: var(--navy);
+}
+
+body {
+  font-size: var(--body-font-size);
+}
+
+p {
+  font-size: var(--body-font-size);
+}
+
+small {
+  font-size: var(--small-font-size);
+}
+
+label {
+  font-size: var(--supporting-font-size);
+}
+
+h2 {
+  font-size: var(--section-heading-size);
+}

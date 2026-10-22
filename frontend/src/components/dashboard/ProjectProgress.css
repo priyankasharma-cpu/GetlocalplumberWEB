@@ -1,0 +1,46 @@
+/* ProjectProgress — component styles and colocated responsive rules. */
+
+.project-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin: 25px 0 20px;
+}
+
+.project-progress > span {
+  font-size: 0;
+  position: relative;
+  padding-top: 13px;
+}
+
+.project-progress > span:before {
+  content: "";
+  height: 5px;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background: #dfe8ef;
+}
+
+.project-progress > span.done:before {
+  background: var(--blue);
+}
+
+.project-progress small {
+  font-size: var(--small-font-size);
+  color: #8796a3;
+  display: block;
+}
+
+.project-progress > span.done small {
+  color: var(--navy);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .project-progress small {
+    font-size: var(--small-font-size);
+  }
+}

@@ -1,0 +1,5 @@
+/* Page composition only; each homepage section owns its own stylesheet. */
+
+.home {
+  display: block;
+}

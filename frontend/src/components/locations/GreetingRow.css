@@ -1,0 +1,48 @@
+/* GreetingRow — component styles and colocated responsive rules. */
+
+.greeting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 24px 16px 0;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.greeting-row > span {
+  font-size: var(--small-font-size);
+  color: #69788a;
+  font-weight: 550;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .greeting-row {
+    padding: 22px 30px 0;
+  }
+  .greeting-row > .location-button {
+    display: none;
+  }
+  .greeting-row > span {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* Responsive: (min-width: 1320px) */
+@media (min-width: 1320px) {
+  .greeting-row {
+    display: none;
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  .greeting-row {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .greeting-row > span {
+    font-size: var(--small-font-size);
+  }
+}

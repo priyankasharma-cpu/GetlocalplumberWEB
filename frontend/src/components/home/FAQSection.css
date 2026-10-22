@@ -1,0 +1,21 @@
+/* FAQSection — component styles and colocated responsive rules. */
+
+.faq-section {
+  display: grid;
+  gap: 10px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .faq-section {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+  }
+  .faq-section h2 {
+    font-size: 34px;
+  }
+}
+
+.faq-section h2 {
+  font-size: var(--section-heading-size);
+}

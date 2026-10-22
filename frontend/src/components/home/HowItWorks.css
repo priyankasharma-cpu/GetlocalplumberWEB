@@ -1,0 +1,70 @@
+/* HowItWorks — component styles and colocated responsive rules. */
+
+.how .section-title {
+  text-align: center;
+}
+
+:where(.how) .steps-grid {
+  display: grid;
+  gap: 18px;
+}
+
+:where(.how) .process-card {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  position: relative;
+}
+
+:where(.how) .step-number {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  color: #c5d9e7;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+:where(.how) .process-icon {
+  display: grid;
+  place-items: center;
+  height: 62px;
+  width: 62px;
+  background: var(--light-blue);
+  border-radius: 50%;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+:where(.how) .process-card h3 {
+  font-size: 20px;
+}
+
+:where(.how) .process-card p {
+  margin: 0;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :where(.how) .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .how .section-title {
+    display: block;
+  }
+  .how .section-title h2 {
+    max-width: none;
+  }
+  :where(.how) .process-card {
+    padding: 30px 23px;
+  }
+  :where(.how) .process-card h3 {
+    font-size: 20px;
+  }
+}
+
+:where(.how) .process-card p {
+  font-size: var(--supporting-font-size);
+}

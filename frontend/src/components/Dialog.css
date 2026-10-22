@@ -1,0 +1,129 @@
+/* Dialog — component styles and colocated responsive rules. */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #082b4c99;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: relative;
+  max-height: calc(100dvh - 28px);
+  overflow: auto;
+  background: #fff;
+  border-radius: 25px;
+  padding: 27px 24px;
+  width: 510px;
+  max-width: 100%;
+  box-shadow: 0 25px 100px #001f3d40;
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal h2 {
+  font-size: 23px;
+  padding-right: 30px;
+}
+
+.modal > .close {
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  background: #f0f6fa;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
+  min-width: 38px;
+}
+
+.dialog-heading .close {
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  background: #f0f6fa;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
+  min-width: 38px;
+}
+
+.modal > .eyebrow {
+  font-size: var(--small-font-size);
+  padding-right: 35px;
+}
+
+.dialog-heading {
+  margin-bottom: 18px;
+}
+
+.dialog-heading h2 {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.modal > .back {
+  margin-top: 20px;
+}
+
+.modal .hero-actions .button {
+  width: 100%;
+}
+
+.modal > ul {
+  font-size: var(--small-font-size);
+  color: #4c6a81;
+  padding-left: 19px;
+  line-height: 2;
+}
+
+.modal > h3 {
+  font-size: 17px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .modal {
+    padding: 30px;
+    width: 510px;
+  }
+  .modal h2 {
+    font-size: 25px;
+  }
+  .modal .hero-actions {
+    flex-wrap: nowrap;
+  }
+  .modal .hero-actions .call .call-copy strong {
+    font-size: var(--small-font-size);
+  }
+  .modal .hero-actions .call .call-copy small {
+    font-size: var(--small-font-size);
+  }
+  .modal .hero-actions .call > svg {
+    display: none;
+  }
+  .modal .hero-actions .button.secondary {
+    font-size: var(--small-font-size);
+    padding: 14px;
+  }
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  .modal {
+    padding: 27px 20px;
+  }
+}
+
+.modal > p {
+  font-size: var(--supporting-font-size);
+}

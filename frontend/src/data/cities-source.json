@@ -1,0 +1,7 @@
+{
+  "source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2026_Gazetteer/2026_Gaz_place_national.zip",
+  "publisher": "U.S. Census Bureau",
+  "dataset": "2026 National Places Gazetteer",
+  "coverageNotice": "Geographic names only; not provider coverage.",
+  "records": 32071
+}

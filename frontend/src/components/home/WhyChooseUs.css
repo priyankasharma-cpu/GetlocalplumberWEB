@@ -1,0 +1,119 @@
+/* WhyChooseUs — component styles and colocated responsive rules. */
+
+.why-section {
+  background: var(--light-blue);
+}
+
+:where(.why-section) .why-intro {
+  background: var(--navy);
+  padding: 36px 24px;
+  color: white;
+}
+
+:where(.why-section) .why-intro h2 {
+  color: white;
+}
+
+:where(.why-section) .why-intro .eyebrow {
+  color: #6cbeee;
+}
+
+:where(.why-section) .why-intro p {
+  color: #bed1e0;
+  font-size: var(--small-font-size);
+}
+
+:where(.why-section) .benefit-grid {
+  display: grid;
+  padding: 32px 23px;
+  gap: 25px;
+}
+
+:where(.why-section) .benefit-grid > div {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+
+:where(.why-section) .benefit-grid h3 {
+  font-size: 16px;
+  margin: 4px 0 7px;
+}
+
+:where(.why-section) .benefit-grid p {
+  margin: 0;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .why-section {
+    display: grid;
+    grid-template-columns: 1fr 1.45fr;
+  }
+  :where(.why-section) .why-intro {
+    padding: 45px 35px;
+  }
+  :where(.why-section) .why-intro h2 {
+    font-size: 36px;
+  }
+  :where(.why-section) .benefit-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 30px;
+    gap: 35px 25px;
+    align-content: center;
+  }
+  :where(.why-section) .benefit-grid > div {
+    display: block;
+  }
+  :where(.why-section) .benefit-grid .feature-icon {
+    margin-bottom: 17px;
+  }
+  :where(.why-section) .benefit-grid h3 {
+    font-size: 16px;
+  }
+}
+
+/* Responsive: (min-width: 1100px) */
+@media (min-width: 1100px) {
+  :where(.why-section) .benefit-grid > div {
+    display: flex;
+    gap: 18px;
+  }
+  :where(.why-section) .why-intro {
+    padding: 50px max(35px, calc((100vw - 1220px) / 2)) 50px
+      max(35px, calc((100vw - 1220px) / 2));
+    padding-right: 40px;
+  }
+  :where(.why-section) .why-intro h2 {
+    font-size: 40px;
+  }
+  :where(.why-section) .benefit-grid {
+    padding: 45px 40px;
+  }
+  :where(.why-section) .benefit-grid h3 {
+    font-size: 17px;
+  }
+}
+
+/* Responsive: (min-width: 1320px) */
+@media (min-width: 1320px) {
+  .why-section {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  :where(.why-section) .why-intro {
+    padding-left: max(40px, calc((100vw - 1220px) / 2));
+    padding-right: 45px;
+  }
+  :where(.why-section) .benefit-grid {
+    padding-left: 55px;
+    padding-right: max(40px, calc((100vw - 1220px) / 2));
+    gap: 35px 40px;
+  }
+  :where(.why-section) .benefit-grid p {
+    font-size: var(--small-font-size);
+  }
+}
+
+:where(.why-section) .benefit-grid p {
+  font-size: var(--supporting-font-size);
+}

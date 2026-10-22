@@ -1,0 +1,722 @@
+[
+  {
+    "id": "emergency-plumbing",
+    "title": "Emergency Plumbing",
+    "slug": "emergency-plumbing",
+    "category": "Repairs & emergencies",
+    "short": "Get your next steps organized when a plumbing problem cannot wait.",
+    "description": "Get your next steps organized when a plumbing problem cannot wait. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["drain-cleaning", "pipe-repair"],
+    "seoTitle": "Emergency Plumbing | GetLocalPlumber.com",
+    "seoDescription": "Get your next steps organized when a plumbing problem cannot wait.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "drain-cleaning",
+    "title": "Drain Cleaning",
+    "slug": "drain-cleaning",
+    "category": "Repairs & emergencies",
+    "short": "Keep water moving with help for slow drains and recurring blockages.",
+    "description": "Keep water moving with help for slow drains and recurring blockages. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["leak-detection", "water-heater-repair"],
+    "seoTitle": "Drain Cleaning | GetLocalPlumber.com",
+    "seoDescription": "Keep water moving with help for slow drains and recurring blockages.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "leak-detection",
+    "title": "Leak Detection",
+    "slug": "leak-detection",
+    "category": "Repairs & emergencies",
+    "short": "Understand unexplained water use, damp spots, and hidden leaks.",
+    "description": "Understand unexplained water use, damp spots, and hidden leaks. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["pipe-repair", "water-heater-installation"],
+    "seoTitle": "Leak Detection | GetLocalPlumber.com",
+    "seoDescription": "Understand unexplained water use, damp spots, and hidden leaks.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "pipe-repair",
+    "title": "Pipe Repair",
+    "slug": "pipe-repair",
+    "category": "Repairs & emergencies",
+    "short": "Explore repair options for damaged or leaking pipes.",
+    "description": "Explore repair options for damaged or leaking pipes. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["water-heater-repair", "tankless-water-heaters"],
+    "seoTitle": "Pipe Repair | GetLocalPlumber.com",
+    "seoDescription": "Explore repair options for damaged or leaking pipes.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "water-heater-repair",
+    "title": "Water Heater Repair",
+    "slug": "water-heater-repair",
+    "category": "Hot water",
+    "short": "Get help understanding hot water problems and repair options.",
+    "description": "Get help understanding hot water problems and repair options. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["water-heater-installation", "toilet-repair"],
+    "seoTitle": "Water Heater Repair | GetLocalPlumber.com",
+    "seoDescription": "Get help understanding hot water problems and repair options.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "water-heater-installation",
+    "title": "Water Heater Installation",
+    "slug": "water-heater-installation",
+    "category": "Hot water",
+    "short": "Plan a replacement that fits your home and hot water needs.",
+    "description": "Plan a replacement that fits your home and hot water needs. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["tankless-water-heaters", "toilet-installation"],
+    "seoTitle": "Water Heater Installation | GetLocalPlumber.com",
+    "seoDescription": "Plan a replacement that fits your home and hot water needs.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "tankless-water-heaters",
+    "title": "Tankless Water Heaters",
+    "slug": "tankless-water-heaters",
+    "category": "Hot water",
+    "short": "Explore on-demand hot water and installation considerations.",
+    "description": "Explore on-demand hot water and installation considerations. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["toilet-repair", "faucet-repair"],
+    "seoTitle": "Tankless Water Heaters | GetLocalPlumber.com",
+    "seoDescription": "Explore on-demand hot water and installation considerations.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "toilet-repair",
+    "title": "Toilet Repair",
+    "slug": "toilet-repair",
+    "category": "Fixtures",
+    "short": "Find a starting point for running, leaking, or blocked toilets.",
+    "description": "Find a starting point for running, leaking, or blocked toilets. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["toilet-installation", "sink-installation"],
+    "seoTitle": "Toilet Repair | GetLocalPlumber.com",
+    "seoDescription": "Find a starting point for running, leaking, or blocked toilets.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "toilet-installation",
+    "title": "Toilet Installation",
+    "slug": "toilet-installation",
+    "category": "Fixtures",
+    "short": "Plan a new toilet installation or replacement.",
+    "description": "Plan a new toilet installation or replacement. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["faucet-repair", "sewer-line-repair"],
+    "seoTitle": "Toilet Installation | GetLocalPlumber.com",
+    "seoDescription": "Plan a new toilet installation or replacement.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "faucet-repair",
+    "title": "Faucet Repair",
+    "slug": "faucet-repair",
+    "category": "Fixtures",
+    "short": "Address drips, worn parts, and troublesome faucet operation.",
+    "description": "Address drips, worn parts, and troublesome faucet operation. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["sink-installation", "sewer-cleaning"],
+    "seoTitle": "Faucet Repair | GetLocalPlumber.com",
+    "seoDescription": "Address drips, worn parts, and troublesome faucet operation.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "sink-installation",
+    "title": "Sink Installation",
+    "slug": "sink-installation",
+    "category": "Fixtures",
+    "short": "Prepare for a new sink and the connections it needs.",
+    "description": "Prepare for a new sink and the connections it needs. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["sewer-line-repair", "garbage-disposal"],
+    "seoTitle": "Sink Installation | GetLocalPlumber.com",
+    "seoDescription": "Prepare for a new sink and the connections it needs.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "sewer-line-repair",
+    "title": "Sewer Line Repair",
+    "slug": "sewer-line-repair",
+    "category": "Home plumbing",
+    "short": "Explore options for damaged underground sewer lines.",
+    "description": "Explore options for damaged underground sewer lines. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["sewer-cleaning", "clogged-drains"],
+    "seoTitle": "Sewer Line Repair | GetLocalPlumber.com",
+    "seoDescription": "Explore options for damaged underground sewer lines.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "sewer-cleaning",
+    "title": "Sewer Cleaning",
+    "slug": "sewer-cleaning",
+    "category": "Home plumbing",
+    "short": "Understand sewer blockages and professional cleaning options.",
+    "description": "Understand sewer blockages and professional cleaning options. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["garbage-disposal", "shower-and-bathtub-repair"],
+    "seoTitle": "Sewer Cleaning | GetLocalPlumber.com",
+    "seoDescription": "Understand sewer blockages and professional cleaning options.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "garbage-disposal",
+    "title": "Garbage Disposal",
+    "slug": "garbage-disposal",
+    "category": "Home plumbing",
+    "short": "Get help with jammed, leaking, or worn kitchen disposals.",
+    "description": "Get help with jammed, leaking, or worn kitchen disposals. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["clogged-drains", "water-line-repair"],
+    "seoTitle": "Garbage Disposal | GetLocalPlumber.com",
+    "seoDescription": "Get help with jammed, leaking, or worn kitchen disposals.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "clogged-drains",
+    "title": "Clogged Drains",
+    "slug": "clogged-drains",
+    "category": "Home plumbing",
+    "short": "Plan the next step for standing water and stubborn clogs.",
+    "description": "Plan the next step for standing water and stubborn clogs. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["shower-and-bathtub-repair", "sump-pump-services"],
+    "seoTitle": "Clogged Drains | GetLocalPlumber.com",
+    "seoDescription": "Plan the next step for standing water and stubborn clogs.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "shower-and-bathtub-repair",
+    "title": "Shower & Bathtub Repair",
+    "slug": "shower-and-bathtub-repair",
+    "category": "Home plumbing",
+    "short": "Address leaks and fixture problems in your shower or bathtub.",
+    "description": "Address leaks and fixture problems in your shower or bathtub. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["water-line-repair", "gas-line-plumbing"],
+    "seoTitle": "Shower & Bathtub Repair | GetLocalPlumber.com",
+    "seoDescription": "Address leaks and fixture problems in your shower or bathtub.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "water-line-repair",
+    "title": "Water Line Repair",
+    "slug": "water-line-repair",
+    "category": "Home plumbing",
+    "short": "Understand supply pipe problems and water line repair options.",
+    "description": "Understand supply pipe problems and water line repair options. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["sump-pump-services", "water-pressure-issues"],
+    "seoTitle": "Water Line Repair | GetLocalPlumber.com",
+    "seoDescription": "Understand supply pipe problems and water line repair options.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "sump-pump-services",
+    "title": "Sump Pump Services",
+    "slug": "sump-pump-services",
+    "category": "Home plumbing",
+    "short": "Explore pump maintenance, repair, and replacement.",
+    "description": "Explore pump maintenance, repair, and replacement. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["gas-line-plumbing", "bathroom-plumbing"],
+    "seoTitle": "Sump Pump Services | GetLocalPlumber.com",
+    "seoDescription": "Explore pump maintenance, repair, and replacement.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "gas-line-plumbing",
+    "title": "Gas Line Plumbing",
+    "slug": "gas-line-plumbing",
+    "category": "Home plumbing",
+    "short": "Plan qualified professional help for gas piping work.",
+    "description": "Plan qualified professional help for gas piping work. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["water-pressure-issues", "kitchen-plumbing"],
+    "seoTitle": "Gas Line Plumbing | GetLocalPlumber.com",
+    "seoDescription": "Plan qualified professional help for gas piping work.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "water-pressure-issues",
+    "title": "Water Pressure Issues",
+    "slug": "water-pressure-issues",
+    "category": "Home plumbing",
+    "short": "Explore causes of weak, uneven, or excessive water pressure.",
+    "description": "Explore causes of weak, uneven, or excessive water pressure. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["bathroom-plumbing", "repiping-services"],
+    "seoTitle": "Water Pressure Issues | GetLocalPlumber.com",
+    "seoDescription": "Explore causes of weak, uneven, or excessive water pressure.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "bathroom-plumbing",
+    "title": "Bathroom Plumbing",
+    "slug": "bathroom-plumbing",
+    "category": "Home plumbing",
+    "short": "Organize repairs and improvements for your bathroom.",
+    "description": "Organize repairs and improvements for your bathroom. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["kitchen-plumbing", "plumbing-inspections"],
+    "seoTitle": "Bathroom Plumbing | GetLocalPlumber.com",
+    "seoDescription": "Organize repairs and improvements for your bathroom.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "kitchen-plumbing",
+    "title": "Kitchen Plumbing",
+    "slug": "kitchen-plumbing",
+    "category": "Home plumbing",
+    "short": "Plan plumbing work for the heart of your home.",
+    "description": "Plan plumbing work for the heart of your home. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["repiping-services", "emergency-plumbing"],
+    "seoTitle": "Kitchen Plumbing | GetLocalPlumber.com",
+    "seoDescription": "Plan plumbing work for the heart of your home.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "repiping-services",
+    "title": "Repiping Services",
+    "slug": "repiping-services",
+    "category": "Home plumbing",
+    "short": "Understand whole-home pipe replacement and preparation.",
+    "description": "Understand whole-home pipe replacement and preparation. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["plumbing-inspections", "drain-cleaning"],
+    "seoTitle": "Repiping Services | GetLocalPlumber.com",
+    "seoDescription": "Understand whole-home pipe replacement and preparation.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  },
+  {
+    "id": "plumbing-inspections",
+    "title": "Plumbing Inspections",
+    "slug": "plumbing-inspections",
+    "category": "Home plumbing",
+    "short": "Prepare for a professional assessment of your plumbing.",
+    "description": "Prepare for a professional assessment of your plumbing. A plumbing professional can assess the issue, explain suitable options, and provide a written quote before work begins.",
+    "benefits": [
+      "Understand your options",
+      "Prepare the right questions",
+      "Keep quotes and decisions together"
+    ],
+    "faqs": [
+      {
+        "q": "How much will this service cost?",
+        "a": "Pricing depends on the diagnosis, materials, labor, location, and access. Request an itemized local quote."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Describe the symptoms, take photos if safe, and note when the issue began."
+      }
+    ],
+    "related": ["emergency-plumbing", "leak-detection"],
+    "seoTitle": "Plumbing Inspections | GetLocalPlumber.com",
+    "seoDescription": "Prepare for a professional assessment of your plumbing.",
+    "cta": {
+      "label": "Plan my call"
+    },
+    "cost": null
+  }
+]

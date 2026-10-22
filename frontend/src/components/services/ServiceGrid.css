@@ -1,0 +1,40 @@
+/* ServiceGrid — component styles and colocated responsive rules. */
+
+.service-grid {
+  display: grid;
+}
+
+/* Responsive: (min-width: 480px) */
+@media (min-width: 480px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 21px;
+  }
+}
+
+.service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--card-spacing);
+}
+
+/* Responsive: (max-width: 359px) */
+@media (max-width: 359px) {
+  .service-grid {
+    gap: 8px;
+  }
+}
+
+/* Responsive: (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

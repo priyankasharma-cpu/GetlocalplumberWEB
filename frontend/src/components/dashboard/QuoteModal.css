@@ -1,0 +1,7 @@
+/* QuoteModal — component styles and colocated responsive rules. */
+
+.quote-modal form > p[role="alert"] {
+  font-size: var(--small-font-size);
+  margin-top: 15px;
+  color: var(--blue);
+}

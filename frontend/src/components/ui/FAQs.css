@@ -1,0 +1,59 @@
+/* FAQs — component styles and colocated responsive rules. */
+
+.faqs {
+  min-width: 0;
+}
+
+:where(.faqs) .faq-item {
+  border-bottom: 1px solid #dce7ef;
+}
+
+:where(.faqs) .faq-item > button {
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  text-align: left;
+  min-height: 67px;
+  padding: 19px 0;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+:where(.faqs) .faq-item > button svg {
+  color: var(--blue);
+  transition: transform 0.25s;
+}
+
+:where(.faqs) .faq-item.expanded > button svg {
+  transform: rotate(180deg);
+}
+
+:where(.faqs) .faq-item > div {
+  overflow: hidden;
+}
+
+:where(.faqs) .faq-item p {
+  padding-right: 20px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :where(.faqs) .faq-item > button {
+    font-size: var(--supporting-font-size);
+  }
+}
+
+:where(.faqs) .faq-item > button {
+  font-size: var(--supporting-font-size);
+}
+
+:where(.faqs) .faq-item p {
+  font-size: var(--supporting-font-size);
+}

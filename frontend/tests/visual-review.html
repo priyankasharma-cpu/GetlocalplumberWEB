@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Visual review</title><style>body{margin:0;font:14px system-ui;background:#eaf4fa}iframe{display:block;border:0;height:1000px}label{display:block;padding:8px}</style><label>Review width <select id="width"><option>320</option><option>360</option><option>390</option><option>430</option><option>768</option><option>1024</option><option>1440</option></select></label><iframe title="Website at review width"></iframe><script type="module">
+const params=new URLSearchParams(location.search),width=Number(params.get('width')||1440),route=params.get('page')||'/services?view=grid';
+const frame=document.querySelector('iframe');frame.width=width;frame.src=route;document.querySelector('select').value=width;
+frame.onload=async()=>{
+  for(let n=0;n<=1&&!frame.contentWindow.matchMedia(`(min-width: ${width}px)`).matches;n+=.25)frame.style.width=`${width+n}px`;
+  const doc=frame.contentDocument;
+  if(params.get('mode')==='before'){
+    doc.querySelectorAll('link[rel="stylesheet"],style').forEach(s=>s.remove());
+    const css=doc.createElement('link');css.rel='stylesheet';css.href='/__baseline.css';doc.head.append(css);
+    await new Promise(resolve=>css.onload=resolve);
+    await new Promise(resolve=>setTimeout(resolve,350));
+  }
+  if(params.get('scenario')==='planner'||params.get('scenario')==='ticket'){
+    // This isolated QA origin temporarily preserves any prior session draft.
+    const store=frame.contentWindow.sessionStorage,old=store.getItem('glp-draft');store.removeItem('glp-draft');
+    [...doc.querySelectorAll('button')].find(b=>b.textContent.includes('Plan my call first'))?.click();
+    const settle=()=>new Promise(resolve=>setTimeout(resolve,100));await settle();
+    if(params.get('scenario')==='ticket')for(const answer of ['Repair or fix','Within a month','Single-family house','Yes, I own it']){
+      [...doc.querySelectorAll('button')].find(b=>b.textContent.trim()===answer)?.click();await settle();
+    }
+    if(old===null)store.removeItem('glp-draft');else store.setItem('glp-draft',old);
+  }
+  if(params.get('scroll')==='footer')frame.contentWindow.scrollTo({top:doc.body.scrollHeight,behavior:'instant'});
+  const ready=document.createElement('span');ready.textContent='Review ready';ready.setAttribute('role','status');document.body.append(ready);
+};
+document.querySelector('select').onchange=e=>{params.set('width',e.target.value);location.search=params;};
+</script></html>

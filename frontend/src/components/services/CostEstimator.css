@@ -1,0 +1,53 @@
+/* CostEstimator — component styles and colocated responsive rules. */
+
+.estimator {
+  padding: 25px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.estimator h2 {
+  font-size: 26px;
+}
+
+.estimate-result {
+  padding: 22px;
+  background: var(--light-blue);
+  border-radius: 13px;
+  margin-top: 20px;
+}
+
+.estimate-result strong {
+  font-size: 17px;
+  line-height: 1.5;
+  display: block;
+  color: var(--navy);
+}
+
+.estimate-result p {
+  font-size: var(--small-font-size);
+  margin: 10px 0;
+}
+
+.estimate-result small {
+  font-size: var(--small-font-size);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .estimator .form-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .estimator {
+    padding: 35px;
+  }
+  .estimate-result {
+    padding: 25px;
+  }
+}
+
+.estimator p {
+  font-size: var(--supporting-font-size);
+}

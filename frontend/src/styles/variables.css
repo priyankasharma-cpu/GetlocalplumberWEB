@@ -1,0 +1,46 @@
+/* Edit these tokens to customize the existing brand. */
+
+:root {
+  --font-family-primary: Inter, "Segoe UI", Arial, sans-serif;
+  --primary-navy: #082b4c;
+  --secondary-blue: #0077b6;
+  --accent-orange: #f96a13;
+  --light-blue: #eaf4fa;
+  --white: #fff;
+  --dark-text: #172331;
+  --navy: var(--primary-navy);
+  --blue: var(--secondary-blue);
+  --muted: #667685;
+  --border: #dce6ee;
+  --shadow: 0 8px 28px #082b4c0a;
+  --radius: 18px;
+  --background: #f7fafd;
+  --navbar-font-size: 15px;
+  --body-font-size: 16px;
+  --supporting-font-size: 15px;
+  --small-font-size: 14px;
+  --button-font-size: 15px;
+  --card-title-size: 17px;
+  --card-description-size: 14px;
+  --hero-font-size: clamp(34px, 8.7vw, 44px);
+  --section-heading-size: clamp(26px, 3.5vw, 40px);
+  --container-width: 1280px;
+  --section-spacing: 48px;
+  --card-spacing: 12px;
+  --header-height: 76px;
+  --logo-width: 195px;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :root {
+    --body-font-size: 17px;
+    --section-spacing: 64px;
+    --card-spacing: 20px;
+    --header-height: 88px;
+    --logo-width: 240px;
+    --card-title-size: 19px;
+    --card-description-size: 15px;
+    --hero-font-size: clamp(44px, 4.3vw, 64px);
+  }
+}

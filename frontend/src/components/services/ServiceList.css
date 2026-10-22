@@ -1,0 +1,94 @@
+/* ServiceList — component styles and colocated responsive rules. */
+
+.services-list {
+  display: grid;
+  gap: 12px;
+}
+
+.service-card.list-card {
+  display: flex;
+  padding: 10px;
+  border-radius: 14px;
+  align-items: center;
+  position: relative;
+}
+
+.list-card .service-image {
+  width: 77px;
+  height: 88px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.list-card .service-image > img {
+  border-radius: 10px;
+}
+
+.list-card .service-body {
+  padding: 2px 27px 2px 13px;
+  flex: 1;
+  min-width: 0;
+}
+
+.list-card .service-body h3 {
+  margin-bottom: 6px;
+}
+
+.list-card .service-body p {
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-card .image-placeholder {
+  min-height: 88px;
+}
+
+.list-card .image-placeholder span {
+  display: none;
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  .services-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .list-card .service-image {
+    width: 90px;
+    height: 95px;
+  }
+  .list-card .service-body {
+    padding: 4px 28px 4px 14px;
+  }
+  .list-card .service-body h3 {
+    font-size: 16px;
+  }
+  .list-card .service-body p {
+    font-size: var(--small-font-size);
+    min-height: 0;
+  }
+}
+
+.list-card .service-body h3 {
+  font-size: var(--card-title-size);
+}
+
+.list-card .service-body p {
+  font-size: var(--card-description-size);
+}
+
+/* Separate links keep calling independent from opening the service details. */
+.service-card.list-card .service-body { padding-right: 0; }
+.service-card.list-card .learn-link { margin-top: 4px; }
+.service-card.list-card .card-actions { margin-top: 0; padding-top: 4px; }
+.service-card.list-card .call-copy strong { font-size: 14px; }
+@media (max-width: 374px) {
+  .service-card.list-card { align-items: flex-start; }
+  .service-card.list-card .service-image { width: 54px; height: 70px; }
+  .service-card.list-card .call-icon { width: 22px; height: 22px; }
+}

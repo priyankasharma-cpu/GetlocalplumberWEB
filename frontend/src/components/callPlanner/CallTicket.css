@@ -1,0 +1,44 @@
+/* CallTicket — component styles and colocated responsive rules. */
+
+:where(.planner-modal) .ticket {
+  background: var(--navy);
+  color: white;
+  border-radius: 17px;
+  padding: 23px;
+  margin: 24px 0;
+}
+
+:where(.planner-modal) .ticket h3 {
+  color: white;
+  font-size: 24px;
+}
+
+:where(.planner-modal) .ticket > div {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+:where(.planner-modal) .ticket small {
+  color: #91b4cd;
+  font-size: var(--small-font-size);
+}
+
+:where(.planner-modal) .ticket strong {
+  font-size: var(--small-font-size);
+  font-weight: 550;
+}
+
+:where(.planner-modal) .ticket p {
+  color: #b6cde0;
+  margin-bottom: 0;
+}
+
+.planner-modal .ticket {
+  margin-top: 20px;
+}
+
+:where(.planner-modal) .ticket p {
+  font-size: var(--supporting-font-size);
+}

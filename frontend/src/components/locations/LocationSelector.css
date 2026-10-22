@@ -1,0 +1,142 @@
+/* LocationSelector — component styles and colocated responsive rules. */
+
+:where(.location-modal) .location-input {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 16px;
+  width: 100%;
+  margin: 0;
+  min-height: 48px;
+  color: #8395a5;
+}
+
+:where(.location-modal) .location-input input {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  padding: 15px 0;
+  margin: 0;
+  min-width: 0;
+  font-size: var(--small-font-size);
+  outline-offset: 2px;
+}
+
+:where(.location-modal) .location-input:focus-within {
+  border-color: var(--blue);
+}
+
+.location-modal {
+  width: 540px;
+}
+
+.location-modal .location-input {
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+:where(.location-modal) .location-input button {
+  min-width: 30px;
+  min-height: 30px;
+  padding: 3px;
+}
+
+:where(.location-modal) .location-results {
+  max-height: 380px;
+  overflow: auto;
+  padding-right: 3px;
+}
+
+:where(.location-modal) .location-results > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 9px;
+  background: white;
+  border: 0;
+  border-radius: 11px;
+  text-align: left;
+  min-height: 62px;
+}
+
+:where(.location-modal) .location-results > button:hover {
+  background: var(--light-blue);
+}
+
+:where(.location-modal) .location-results > button > span:nth-child(2) {
+  flex: 1;
+}
+
+:where(.location-modal) .location-results strong {
+  font-size: var(--small-font-size);
+  display: block;
+}
+
+:where(.location-modal) .location-results small {
+  font-size: var(--small-font-size);
+  display: block;
+  margin-top: 3px;
+}
+
+:where(.location-modal) .location-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--light-blue);
+  color: var(--blue);
+}
+
+:where(.location-modal) .selected-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+  font-size: var(--small-font-size);
+  background: var(--light-blue);
+  border-radius: 10px;
+  color: var(--blue);
+}
+
+:where(.location-modal) .location-source {
+  padding-top: 16px;
+  margin: 12px 0 0;
+  border-top: 1px solid var(--border);
+  font-size: var(--small-font-size) !important;
+  color: #8193a2;
+}
+
+:where(.location-modal) .no-results {
+  padding: 15px 0;
+  font-size: var(--small-font-size);
+}
+
+/* Responsive: (min-width: 768px) */
+@media (min-width: 768px) {
+  :where(.location-modal) .location-results {
+    max-height: 410px;
+  }
+  :where(.location-modal) .location-source {
+    font-size: var(--small-font-size) !important;
+  }
+}
+
+:where(.location-modal) .clear-location {
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-size: var(--small-font-size);
+  text-decoration: underline;
+  min-height: 34px;
+  padding: 5px;
+  margin-left: auto;
+}
+
+.location-modal > p {
+  font-size: var(--supporting-font-size);
+}

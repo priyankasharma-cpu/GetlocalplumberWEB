@@ -1,0 +1,2 @@
+/* Account page root; shared responsive geometry is in FormPage.css. */
+.account-page { display: grid; }
