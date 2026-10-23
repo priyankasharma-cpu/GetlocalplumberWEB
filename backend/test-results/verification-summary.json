@@ -1,0 +1,18 @@
+{
+  "frontendFilesChecked": 108,
+  "changedFrontendCssOrJsx": [],
+  "frontendCredentialMatches": [],
+  "devProxyStatus": 200,
+  "accountResponseValid": true,
+  "backendTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "frontendBuild": "passed",
+  "frontendLint": "passed",
+  "frontendTests": {
+    "passed": 13,
+    "failed": 1,
+    "existingFailure": "Hero.css duplicate .hero margin-top declaration under max-width:767px"
+  }
+}

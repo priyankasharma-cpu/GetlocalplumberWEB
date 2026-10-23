@@ -1,142 +1,642 @@
-/* LocationSelector — component styles and colocated responsive rules. */
-
-:where(.location-modal) .location-input {
-  display: flex !important;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0 16px;
-  width: 100%;
-  margin: 0;
-  min-height: 48px;
-  color: #8395a5;
-}
-
-:where(.location-modal) .location-input input {
-  border: 0;
-  background: none;
-  box-shadow: none;
-  padding: 15px 0;
-  margin: 0;
-  min-width: 0;
-  font-size: var(--small-font-size);
-  outline-offset: 2px;
-}
-
-:where(.location-modal) .location-input:focus-within {
-  border-color: var(--blue);
-}
+/* ==========================================
+   GETLOCALPLUMBER LOCATION SELECTOR
+========================================== */
 
 .location-modal {
-  width: 540px;
+  --glp-navy: #082b4c;
+  --glp-blue: #0077b6;
+  --glp-orange: #f96a13;
+  --glp-cream: #f3ecdf;
+  --glp-light-blue: #eaf4fa;
+
+  width: min(510px, calc(100vw - 24px));
+  max-width: 510px;
+  max-height: min(90dvh, 760px);
+
+  border-radius: 26px;
+  background: var(--glp-cream);
+  color: var(--glp-navy);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
-.location-modal .location-input {
-  margin-bottom: 15px;
-  border-radius: 12px;
+.location-modal .glp-location-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
-:where(.location-modal) .location-input button {
-  min-width: 30px;
-  min-height: 30px;
-  padding: 3px;
+/* INTRO */
+
+.location-modal .glp-location-description {
+  margin: 0 0 18px;
+
+  color: #687887;
+  font-size: 14px;
+  line-height: 1.65;
 }
 
-:where(.location-modal) .location-results {
-  max-height: 380px;
-  overflow: auto;
-  padding-right: 3px;
+/* ==========================================
+   CURRENT LOCATION
+========================================== */
+
+.location-modal .glp-geolocation-area {
+  margin-bottom: 20px;
 }
 
-:where(.location-modal) .location-results > button {
+.location-modal .glp-current-location-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  width: 100%;
+  min-height: 55px;
+  padding: 13px 20px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--glp-orange);
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(249, 106, 19, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.location-modal .glp-current-location-btn:hover:not(:disabled) {
+  background: #e65b0a;
+  transform: translateY(-2px);
+  box-shadow: 0 11px 23px rgba(249, 106, 19, 0.24);
+}
+
+.location-modal .glp-current-location-btn:disabled {
+  opacity: 0.75;
+  cursor: wait;
+}
+
+.location-modal .glp-current-location-btn:focus-visible {
+  outline: 3px solid var(--glp-blue);
+  outline-offset: 3px;
+}
+
+.location-modal .glp-location-spinner {
+  animation: glp-location-spin 1s linear infinite;
+}
+
+@keyframes glp-location-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DIVIDER */
+
+.location-modal .glp-location-divider {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 18px;
+
+  color: #7c8790;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.location-modal .glp-location-divider::before,
+.location-modal .glp-location-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d8ccba;
+}
+
+.location-modal .glp-location-divider span {
+  flex-shrink: 0;
+}
+
+/* GEOLOCATION ERROR */
+
+.location-modal .glp-geolocation-error {
+  margin: 11px 0 0;
+  padding: 11px 13px;
+
+  border: 1px solid #f4c6be;
+  border-radius: 11px;
+
+  background: #fff2ef;
+  color: #aa3424;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   SEARCH HEADING
+========================================== */
+
+.location-modal .glp-location-search-area {
+  margin-bottom: 16px;
+}
+
+.location-modal .glp-search-heading {
+  margin-bottom: 17px;
+}
+
+.location-modal .glp-search-heading h3 {
+  margin: 0 0 6px;
+
+  color: var(--glp-navy);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.location-modal .glp-search-heading p {
+  margin: 0;
+
+  color: #687887;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.location-modal .glp-location-label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--glp-navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* SEARCH INPUT */
+
+.location-modal .glp-location-search {
   display: flex;
   align-items: center;
   gap: 12px;
+
   width: 100%;
-  padding: 11px 9px;
-  background: white;
-  border: 0;
-  border-radius: 11px;
-  text-align: left;
-  min-height: 62px;
+  min-height: 55px;
+  padding: 0 15px;
+
+  border: 1px solid #d9cdbb;
+  border-radius: 15px;
+
+  background: #ffffff;
+  color: var(--glp-blue);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-:where(.location-modal) .location-results > button:hover {
-  background: var(--light-blue);
+.location-modal .glp-location-search:focus-within {
+  border-color: var(--glp-blue);
+  box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.1);
 }
 
-:where(.location-modal) .location-results > button > span:nth-child(2) {
+.location-modal .glp-location-search input {
   flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  padding: 15px 0;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--glp-navy);
 }
 
-:where(.location-modal) .location-results strong {
-  font-size: var(--small-font-size);
-  display: block;
+.location-modal .glp-location-search input::placeholder {
+  color: #87929e;
 }
 
-:where(.location-modal) .location-results small {
-  font-size: var(--small-font-size);
-  display: block;
-  margin-top: 3px;
-}
-
-:where(.location-modal) .location-icon {
+.location-modal .glp-search-clear {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+
+  width: 31px;
+  height: 31px;
+  flex-shrink: 0;
+
+  padding: 0;
+  border: 0;
   border-radius: 50%;
-  background: var(--light-blue);
-  color: var(--blue);
+
+  background: #edf4f9;
+  color: var(--glp-blue);
+  cursor: pointer;
 }
 
-:where(.location-modal) .selected-location {
+/* ==========================================
+   SELECTED LOCATION
+========================================== */
+
+.location-modal .glp-selected-location {
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 10px;
-  font-size: var(--small-font-size);
-  background: var(--light-blue);
-  border-radius: 10px;
-  color: var(--blue);
+  gap: 11px;
+
+  padding: 12px;
+  margin-bottom: 15px;
+
+  background: #e7f6ee;
+  border: 1px solid #bfe4d0;
+  border-radius: 14px;
 }
 
-:where(.location-modal) .location-source {
-  padding-top: 16px;
-  margin: 12px 0 0;
-  border-top: 1px solid var(--border);
-  font-size: var(--small-font-size) !important;
-  color: #8193a2;
+.location-modal .glp-selected-check {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #159563;
+  color: #ffffff;
 }
 
-:where(.location-modal) .no-results {
-  padding: 15px 0;
-  font-size: var(--small-font-size);
+.location-modal .glp-selected-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  flex: 1;
+  min-width: 0;
 }
 
-/* Responsive: (min-width: 768px) */
-@media (min-width: 768px) {
-  :where(.location-modal) .location-results {
-    max-height: 410px;
-  }
-  :where(.location-modal) .location-source {
-    font-size: var(--small-font-size) !important;
-  }
+.location-modal .glp-selected-text small {
+  font-size: 11px;
+  color: #59776b;
 }
 
-:where(.location-modal) .clear-location {
+.location-modal .glp-selected-text strong {
+  font-size: 13px;
+  color: var(--glp-navy);
+  overflow-wrap: anywhere;
+}
+
+.location-modal .glp-selected-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  flex-shrink: 0;
+  padding: 8px 10px;
+
   border: 0;
-  background: none;
-  color: var(--blue);
-  font-size: var(--small-font-size);
-  text-decoration: underline;
-  min-height: 34px;
-  padding: 5px;
-  margin-left: auto;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #16784f;
+
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.location-modal > p {
-  font-size: var(--supporting-font-size);
+/* ==========================================
+   SCROLLABLE RESULTS
+========================================== */
+
+.location-modal .glp-location-results {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  max-height: min(360px, 38dvh);
+  min-height: 80px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 0 5px 4px 0;
+
+  scrollbar-width: thin;
+  scrollbar-color: #b5b2a8 transparent;
+}
+
+.location-modal .glp-location-section {
+  min-width: 0;
+}
+
+.location-modal .glp-results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-bottom: 11px;
+}
+
+.location-modal .glp-heading-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--glp-blue);
+}
+
+.location-modal .glp-heading-left h3 {
+  margin: 0;
+
+  color: var(--glp-navy);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.location-modal .glp-results-count {
+  display: grid;
+  place-items: center;
+
+  min-width: 31px;
+  height: 27px;
+  padding: 0 8px;
+
+  background: #ffffff;
+  border-radius: 999px;
+
+  color: var(--glp-blue);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* RESULT CARDS */
+
+.location-modal .glp-location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.location-modal .glp-location-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 55px;
+  padding: 9px 13px;
+
+  background: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 13px;
+
+  color: var(--glp-navy);
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.location-modal .glp-location-item:hover {
+  border-color: #9fcde5;
+  background: #f7fcff;
+  transform: translateX(2px);
+  box-shadow: 0 3px 12px rgba(8, 43, 76, 0.05);
+}
+
+.location-modal .glp-location-item:focus-visible,
+.location-modal .glp-search-clear:focus-visible,
+.location-modal .glp-selected-clear:focus-visible {
+  outline: 3px solid var(--glp-orange);
+  outline-offset: 2px;
+}
+
+.location-modal .glp-item-icon,
+.location-modal .glp-state-badge {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+
+  background: var(--glp-light-blue);
+  border-radius: 11px;
+  color: var(--glp-blue);
+}
+
+.location-modal .glp-state-badge {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.location-modal .glp-item-name {
+  flex: 1;
+  min-width: 0;
+
+  color: var(--glp-navy);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.location-modal .glp-item-meta {
+  flex-shrink: 0;
+  max-width: 34%;
+
+  color: #687887;
+  font-size: 12px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.location-modal .glp-item-arrow {
+  flex-shrink: 0;
+  color: #86a9bf;
+  transition: transform 0.2s ease;
+}
+
+.location-modal .glp-location-item:hover .glp-item-arrow {
+  color: var(--glp-blue);
+  transform: translateX(3px);
+}
+
+.location-modal .glp-location-empty {
+  padding: 15px 10px;
+  margin: 0;
+
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 11px;
+
+  color: #6b7884;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ERRORS */
+
+.location-modal .glp-location-error {
+  margin: 12px 0 0;
+  padding: 11px 13px;
+
+  border-radius: 10px;
+  background: #fff0ed;
+  color: #b42318;
+  font-size: 13px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.location-modal .glp-location-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-top: 16px;
+  padding-top: 14px;
+
+  border-top: 1px solid #d9cdbb;
+}
+
+.location-modal .glp-location-footer>svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--glp-blue);
+}
+
+.location-modal .glp-location-footer p {
+  margin: 0;
+
+  color: #6b7884;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+  .location-modal {
+    width: calc(100vw - 20px);
+    max-height: 92dvh;
+    border-radius: 21px;
+  }
+
+  .location-modal .glp-location-description {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .location-modal .glp-current-location-btn {
+    min-height: 51px;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .location-modal .glp-geolocation-area {
+    margin-bottom: 17px;
+  }
+
+  .location-modal .glp-search-heading h3 {
+    font-size: 17px;
+  }
+
+  .location-modal .glp-search-heading p {
+    font-size: 12px;
+  }
+
+  .location-modal .glp-location-search {
+    min-height: 51px;
+    padding: 0 12px;
+  }
+
+  .location-modal .glp-location-search input {
+    font-size: 14px;
+  }
+
+  .location-modal .glp-location-results {
+    max-height: min(320px, 35dvh);
+  }
+
+  .location-modal .glp-location-item {
+    min-height: 54px;
+    padding: 9px 10px;
+    gap: 9px;
+  }
+
+  .location-modal .glp-item-name {
+    font-size: 13px;
+  }
+
+  .location-modal .glp-item-meta {
+    font-size: 11px;
+    max-width: 32%;
+  }
+
+  .location-modal .glp-item-icon,
+  .location-modal .glp-state-badge {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .location-modal .glp-location-footer p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .location-modal .glp-item-meta {
+    max-width: 28%;
+    font-size: 10px;
+  }
+
+  .location-modal .glp-location-item {
+    gap: 7px;
+  }
+
+  .location-modal .glp-selected-clear {
+    padding: 7px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .location-modal .glp-location-item,
+  .location-modal .glp-item-arrow,
+  .location-modal .glp-current-location-btn {
+    transition: none;
+  }
+
+  .location-modal .glp-location-item:hover,
+  .location-modal .glp-location-item:hover .glp-item-arrow,
+  .location-modal .glp-current-location-btn:hover {
+    transform: none;
+  }
+
+  .location-modal .glp-location-spinner {
+    animation: none;
+  }
 }

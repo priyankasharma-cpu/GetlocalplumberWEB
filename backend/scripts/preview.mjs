@@ -2,8 +2,9 @@
 import { randomBytes } from "node:crypto";
 import mongoose from "mongoose";
 import { createApp } from "../src/app.js";
-const mongoUrl = "mongodb://127.0.0.1:27018/getlocalplumbers_preview";
-await mongoose.connect(mongoUrl);
+import { connectDatabase } from "../src/config/database.js";
+const mongoUrl = "mongodb://127.0.0.1:27018/excellenthomeoffers_db";
+await connectDatabase(mongoUrl);
 const server = createApp({
   mongoUrl,
   secret: randomBytes(48).toString("hex"),

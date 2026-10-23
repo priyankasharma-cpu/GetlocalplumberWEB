@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node --env-file-if-exists=.env --watch src/server.js",
     "start": "node --env-file-if-exists=.env src/server.js",
-    "test": "node --test"
+    "test": "node --test",
+    "check:database": "node --env-file-if-exists=.env scripts/check-database.mjs",
+    "verify:atlas": "node --env-file-if-exists=.env scripts/verify-atlas.mjs"
   },
   "dependencies": {
     "express": "^5.1.0",

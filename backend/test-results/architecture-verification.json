@@ -1,0 +1,27 @@
+{
+  "filesChecked": 225,
+  "changedFrontendSourceFiles": [],
+  "backendBaselineTests": 23,
+  "backendFinalTests": 28,
+  "atlasChecks": 17,
+  "atlasCleanupVerified": true,
+  "proxyChecks": [
+    {
+      "origin": "http://127.0.0.1:4000",
+      "status": 200,
+      "accountContractValid": true
+    },
+    {
+      "origin": "http://127.0.0.1:5174",
+      "status": 200,
+      "accountContractValid": true
+    }
+  ],
+  "frontendBuild": "passed",
+  "frontendLint": "passed",
+  "frontendTests": {
+    "passed": 13,
+    "failed": 1,
+    "existingIssue": "Hero.css duplicate media-query declaration"
+  }
+}

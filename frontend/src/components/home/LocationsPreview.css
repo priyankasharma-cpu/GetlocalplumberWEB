@@ -1,93 +1,809 @@
-/* LocationsPreview — component styles and colocated responsive rules. */
+/* ==========================================
+   GETLOCALPLUMBER — LOCATIONS PREVIEW
+========================================== */
 
-:where(.locations-section) .locations-home {
+.locations-section {
+  --loc-navy: #082b4c;
+  --loc-blue: #0077b6;
+  --loc-orange: #f96a13;
+  --loc-light: #eaf4fa;
+  --loc-border: #dce9f2;
+}
+
+.locations-section .locations-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+
+.locations-section .locations-home {
   display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 1fr);
+  align-items: stretch;
   gap: 20px;
+
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
-:where(.locations-section) .location-feature {
-  background: var(--light-blue);
-  padding: 28px;
-  border-radius: 17px;
+/* ==========================================
+   LEFT FEATURE PANEL
+========================================== */
+
+.locations-section .location-feature {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 420px;
+  padding: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+
+  background: linear-gradient(125deg,
+      #e7f5ff 0%,
+      #f5fbff 55%,
+      #dceefb 100%);
+
+  box-shadow:
+    0 15px 40px rgba(8, 43, 76, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-:where(.locations-section) .location-feature h3 {
-  font-size: 25px;
-  margin-top: 20px;
+.locations-section .location-feature-content {
+  position: relative;
+  z-index: 2;
+  max-width: 390px;
 }
 
-:where(.locations-section) .location-preview {
+/* ==========================================
+   FEATURE ICON
+========================================== */
+
+.locations-section .location-feature-icon {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 11px;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 19px;
+
+  color: var(--loc-orange);
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 7px 20px rgba(0, 119, 182, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
-:where(.locations-section) .location-preview > a {
+.locations-section .location-feature-icon svg {
+  filter: drop-shadow(0 3px 5px rgba(249, 106, 19, 0.16));
+}
+
+/* ==========================================
+   FEATURE LABEL
+========================================== */
+
+.locations-section .location-feature-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 22px;
+
+  color: var(--loc-blue);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.locations-section .location-feature-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--loc-orange);
+}
+
+/* ==========================================
+   FEATURE TEXT
+========================================== */
+
+.locations-section .location-feature h3 {
+  margin: 14px 0 15px;
+
+  color: var(--loc-navy);
+  font-size: clamp(27px, 2.8vw, 37px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -1.1px;
+}
+
+.locations-section .location-feature h3 span {
+  color: var(--loc-blue);
+}
+
+.locations-section .location-feature p {
+  max-width: 340px;
+  margin: 0 0 23px;
+
+  color: #416581;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   CHOOSE CITY BUTTON
+========================================== */
+
+.locations-section .location-choose-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 54px;
+  padding: 13px 18px;
+
+  border: 0;
+  border-radius: 16px;
+
+  background: linear-gradient(125deg,
+      #082b4c,
+      #00518c);
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 20px rgba(8, 43, 76, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.locations-section .location-choose-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 28px rgba(8, 43, 76, 0.23);
+}
+
+.locations-section .location-choose-btn:focus-visible {
+  outline: 3px solid var(--loc-orange);
+  outline-offset: 4px;
+}
+
+.locations-section .location-btn-arrow {
+  margin-left: 13px;
+  transition: transform 0.25s ease;
+}
+
+.locations-section .location-choose-btn:hover .location-btn-arrow {
+  transform: translateX(5px);
+}
+
+/* ==========================================
+   DECORATIVE MAP
+========================================== */
+
+.locations-section .location-map-art {
+  position: absolute;
+  z-index: 0;
+
+  right: -55px;
+  bottom: 5px;
+
+  width: 310px;
+  height: 310px;
+
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.locations-section .location-map-globe {
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 119, 182, 0.1);
+  stroke-width: 0.65;
+}
+
+.locations-section .location-map-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+
+  color: var(--loc-orange);
+
+  box-shadow:
+    0 5px 15px rgba(249, 106, 19, 0.12);
+
+  animation: location-pin-float 3.5s ease-in-out infinite;
+}
+
+.locations-section .pin-one {
+  top: 22%;
+  left: 35%;
+}
+
+.locations-section .pin-two {
+  top: 47%;
+  right: 15%;
+  animation-delay: 0.7s;
+}
+
+.locations-section .pin-three {
+  bottom: 17%;
+  left: 22%;
+  animation-delay: 1.4s;
+}
+
+.locations-section .pin-four {
+  bottom: 30%;
+  right: 32%;
+  animation-delay: 2s;
+}
+
+@keyframes location-pin-float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ==========================================
+   FEATURE BOTTOM BADGE
+========================================== */
+
+.locations-section .location-feature-bottom {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  width: fit-content;
+  margin-top: 28px;
+
+  padding: 12px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 6px 18px rgba(8, 43, 76, 0.05);
+}
+
+.locations-section .location-coverage-icon {
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 11px;
+  background: var(--loc-light);
+  color: var(--loc-blue);
+}
+
+.locations-section .location-feature-bottom>div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.locations-section .location-feature-bottom small {
+  color: #55758e;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.7px;
+}
+
+.locations-section .location-feature-bottom strong {
+  color: var(--loc-navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.locations-section .location-feature-bottom>svg {
+  margin-left: 8px;
+  color: var(--loc-orange);
+}
+
+/* ==========================================
+   RIGHT STATES GRID
+========================================== */
+
+.locations-section .location-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+
+  min-width: 0;
+  padding: 12px;
+
+  border: 1px solid var(--loc-border);
+  border-radius: 25px;
+
+  background: #f7fbfe;
+}
+
+/* ==========================================
+   STATE CARDS
+========================================== */
+
+.locations-section .location-state-card {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid var(--border);
-  background: white;
-  border-radius: 10px;
-  padding: 17px 12px;
+
+  min-width: 0;
+  min-height: 90px;
+
+  padding: 9px;
+
+  border: 1px solid #e6eef5;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: var(--loc-navy);
+  text-decoration: none;
+
+  box-shadow: 0 4px 13px rgba(8, 43, 76, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  animation: location-card-enter 0.55s ease both;
+  animation-delay: calc(var(--state-index) * 75ms);
+}
+
+.locations-section .location-state-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(0, 119, 182, 0.25);
+
+  box-shadow: 0 12px 25px rgba(8, 43, 76, 0.1);
+}
+
+.locations-section .location-state-image {
+  display: block;
+  flex-shrink: 0;
+
+  width: 69px;
+  height: 69px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  background: #dcecf6;
+}
+
+.locations-section .location-state-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.locations-section .location-state-card:hover .location-state-image img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   STATE TEXT
+========================================== */
+
+.locations-section .location-state-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  min-width: 0;
+  flex: 1;
+}
+
+.locations-section .location-state-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   min-width: 0;
 }
 
-:where(.locations-section) .location-preview > a > span {
-  font-size: var(--small-font-size);
-  font-weight: 700;
-  color: var(--blue);
+.locations-section .location-state-code {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  min-width: 31px;
+  height: 29px;
+  padding: 0 5px;
+
+  border-radius: 8px;
+
+  background: #e4f2fc;
+  color: var(--loc-blue);
+
+  font-size: 11px;
+  font-weight: 800;
 }
 
-:where(.locations-section) .location-preview strong {
-  font-size: var(--small-font-size);
-  font-weight: 600;
+.locations-section .location-state-heading strong {
+  color: var(--loc-navy);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
 }
 
-:where(.locations-section) .location-preview svg {
-  margin-left: auto;
-  width: 13px;
+.locations-section .location-state-info small {
+  color: #71899b;
+  font-size: 11px;
+  line-height: 1.35;
 }
 
-:where(.locations-section) .location-preview .all-states-link {
-  grid-column: span 2;
-  background: var(--navy);
-  color: #fff;
-  font-size: var(--small-font-size);
-  justify-content: space-between;
+/* ==========================================
+   STATE ARROW
+========================================== */
+
+.locations-section .location-state-arrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #e4f3fc;
+  color: var(--loc-blue);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-/* Responsive: (min-width: 768px) */
-@media (min-width: 768px) {
-  :where(.locations-section) .locations-home {
-    grid-template-columns: 0.85fr 1.4fr;
-    gap: 25px;
+.locations-section .location-state-card:hover .location-state-arrow {
+  transform: translateX(3px);
+  background: var(--loc-orange);
+  color: #ffffff;
+}
+
+/* ==========================================
+   ALL STATES BUTTON
+========================================== */
+
+.locations-section .location-all-states {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 65px;
+  padding: 12px 17px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(110deg,
+      #082b4c,
+      #064e84);
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.locations-section .location-all-states:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(8, 43, 76, 0.18);
+}
+
+.locations-section .location-all-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.locations-section .location-all-states>span:nth-child(2) {
+  flex: 1;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.locations-section .location-all-arrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 37px;
+  height: 37px;
+
+  border-radius: 50%;
+
+  background: #ffdfc9;
+  color: var(--loc-orange);
+}
+
+.locations-section .location-all-states:focus-visible,
+.locations-section .location-state-card:focus-visible {
+  outline: 3px solid var(--loc-orange);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   CARD ENTRANCE ANIMATION
+========================================== */
+
+@keyframes location-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
   }
-  :where(.locations-section) .location-preview {
-    align-content: stretch;
-  }
-  :where(.locations-section) .location-preview > a {
-    padding: 19px;
-  }
-  :where(.locations-section) .location-preview strong {
-    font-size: var(--small-font-size);
-  }
-  :where(.locations-section) .location-preview > a > span {
-    font-size: var(--small-font-size);
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Responsive: (max-width: 359px) */
-@media (max-width: 359px) {
-  :where(.locations-section) .location-preview > a {
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .locations-section .locations-home {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 15px;
+  }
+
+  .locations-section .location-feature {
+    padding: 25px;
+    min-height: 410px;
+  }
+
+  .locations-section .location-feature h3 {
+    font-size: 29px;
+  }
+
+  .locations-section .location-state-image {
+    width: 50px;
+    height: 58px;
+  }
+
+  .locations-section .location-state-card {
     gap: 7px;
-    padding: 15px 10px;
+    padding: 7px;
   }
-  :where(.locations-section) .location-preview strong {
-    font-size: var(--small-font-size);
+
+  .locations-section .location-state-heading {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .locations-section .location-state-heading strong {
+    font-size: 12px;
+  }
+
+  .locations-section .location-state-info small {
+    font-size: 10px;
   }
 }
 
-:where(.locations-section) .location-feature p {
-  font-size: var(--supporting-font-size);
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .locations-section .locations-heading {
+    margin-bottom: 20px;
+  }
+
+  .locations-section .locations-home {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .locations-section .location-feature {
+    min-height: 360px;
+    padding: 25px 21px;
+    border-radius: 21px;
+  }
+
+  .locations-section .location-feature-content {
+    max-width: 100%;
+  }
+
+  .locations-section .location-feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .locations-section .location-feature-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .locations-section .location-feature-label {
+    margin-top: 17px;
+    font-size: 9px;
+  }
+
+  .locations-section .location-feature h3 {
+    margin-top: 12px;
+    font-size: clamp(25px, 6.5vw, 31px);
+  }
+
+  .locations-section .location-feature p {
+    max-width: 300px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .locations-section .location-choose-btn {
+    min-height: 49px;
+    font-size: 13px;
+    padding: 11px 15px;
+  }
+
+  .locations-section .location-map-art {
+    right: -80px;
+    bottom: -30px;
+    width: 230px;
+    height: 230px;
+    opacity: 0.45;
+  }
+
+  .locations-section .location-feature-bottom {
+    margin-top: 22px;
+    padding: 9px 11px;
+  }
+
+  .locations-section .location-preview {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 9px;
+    border-radius: 20px;
+  }
+
+  .locations-section .location-state-card {
+    min-height: 76px;
+    padding: 8px;
+    border-radius: 13px;
+  }
+
+  .locations-section .location-state-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .locations-section .location-state-heading strong {
+    font-size: 13px;
+  }
+
+  .locations-section .location-state-info small {
+    font-size: 11px;
+  }
+
+  .locations-section .location-all-states {
+    min-height: 60px;
+    padding: 10px 12px;
+    border-radius: 13px;
+  }
+
+  .locations-section .location-all-states>span:nth-child(2) {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 359px) {
+  .locations-section .location-feature {
+    padding: 20px 16px;
+  }
+
+  .locations-section .location-feature h3 {
+    font-size: 24px;
+  }
+
+  .locations-section .location-state-image {
+    width: 52px;
+    height: 52px;
+  }
+
+  .locations-section .location-state-heading {
+    gap: 5px;
+  }
+
+  .locations-section .location-state-code {
+    min-width: 27px;
+    height: 25px;
+  }
+
+  .locations-section .location-state-arrow {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .locations-section .location-map-pin,
+  .locations-section .location-state-card {
+    animation: none;
+  }
+
+  .locations-section .location-state-card,
+  .locations-section .location-state-image img,
+  .locations-section .location-state-arrow,
+  .locations-section .location-choose-btn,
+  .locations-section .location-all-states {
+    transition: none;
+  }
+
+  .locations-section .location-state-card:hover,
+  .locations-section .location-choose-btn:hover,
+  .locations-section .location-all-states:hover {
+    transform: none;
+  }
 }

@@ -1,87 +1,376 @@
-/* TrustStrip — component styles and colocated responsive rules. */
+/* ==========================================
+   GETLOCALPLUMBER — PREMIUM TRUST STRIP
+========================================== */
 
 .trust-strip {
+  --trust-navy: #082b4c;
+  --trust-orange: #f96a13;
+  --trust-blue: #0077b6;
+  --trust-border: #e0eaf2;
+
+  width: min(calc(100% - 48px), 1240px);
+  margin: 30px auto 0;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 25px 20px 0;
-  padding: 0 0 26px;
-  border-bottom: 1px solid var(--border);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.trust-strip > div {
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.trust-strip .trust-strip-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+
+  min-width: 0;
+  min-height: 112px;
+  padding: 22px 20px;
+
+  border: 1px solid var(--trust-border);
+  border-radius: 19px;
+
+  background: linear-gradient(145deg,
+      #ffffff 0%,
+      #f8fbfe 100%);
+
+  box-shadow:
+    0 5px 20px rgba(8, 43, 76, 0.035),
+    0 1px 3px rgba(8, 43, 76, 0.025);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  animation: trust-card-enter 0.55s ease both;
+  animation-delay: calc(var(--trust-index) * 90ms);
 }
 
-.trust-strip > div:last-child {
-  display: none;
+.trust-strip .trust-strip-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 106, 19, 0.28);
+
+  box-shadow:
+    0 14px 32px rgba(8, 43, 76, 0.09);
 }
 
-.trust-strip > div > span {
-  width: 35px;
-  height: 35px;
-  background: var(--light-blue);
-  border-radius: 50%;
+/* Orange accent at the top */
+
+.trust-strip .trust-strip-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+
+  width: 48px;
+  height: 3px;
+
+  border-radius: 0 0 5px 5px;
+  background: var(--trust-orange);
+}
+
+/* ==========================================
+   ICON CONTAINER
+========================================== */
+
+.trust-strip .trust-strip-icon {
+  position: relative;
+
   display: grid;
   place-items: center;
-  color: var(--navy);
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 17px;
+
+  background: linear-gradient(145deg,
+      #e9f4fc 0%,
+      #dceef9 100%);
+
+  color: var(--trust-navy);
+
+  border: 1px solid rgba(0, 119, 182, 0.1);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 4px 12px rgba(8, 43, 76, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
 }
 
-.trust-strip svg {
-  width: 18px;
+.trust-strip .trust-strip-icon>svg {
+  width: 27px;
+  height: 27px;
+  stroke-width: 2.1;
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
 }
 
-.trust-strip p {
+.trust-strip .trust-strip-card:hover .trust-strip-icon {
+  transform: rotate(-5deg) scale(1.06);
+
+  background: linear-gradient(145deg,
+      #fff2e8,
+      #ffe4d1);
+}
+
+.trust-strip .trust-strip-card:hover .trust-strip-icon>svg {
+  color: var(--trust-orange);
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   ORANGE CHECK BADGE
+========================================== */
+
+.trust-strip .trust-strip-icon-accent {
+  position: absolute;
+  right: -5px;
+  bottom: -4px;
+
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+
+  background: var(--trust-orange);
+  color: #ffffff;
+
+  box-shadow: 0 3px 7px rgba(249, 106, 19, 0.2);
+}
+
+.trust-strip .trust-strip-icon-accent svg {
+  width: 10px;
+  height: 10px;
+  stroke-width: 3;
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.trust-strip .trust-strip-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.trust-strip .trust-strip-content h3 {
+  margin: 0 0 6px;
+
+  color: var(--trust-navy);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+
+.trust-strip .trust-strip-content p {
   margin: 0;
-  line-height: 1.5;
+
+  color: #6c8294;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
-.trust-strip strong {
-  font-size: var(--small-font-size);
-  display: block;
-  color: var(--navy);
+/* ==========================================
+   SUBTLE BACKGROUND DECORATION
+========================================== */
+
+.trust-strip .trust-strip-decoration {
+  position: absolute;
+  right: -26px;
+  bottom: -40px;
+
+  width: 110px;
+  height: 110px;
+
+  border: 1px solid rgba(0, 119, 182, 0.055);
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
-.trust-strip small {
-  font-size: var(--small-font-size);
-  display: block;
-  margin-top: 3px;
+.trust-strip .trust-strip-decoration::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+
+  border: 1px solid rgba(249, 106, 19, 0.07);
+  border-radius: 50%;
 }
 
-/* Responsive: (min-width: 768px) */
-@media (min-width: 768px) {
+/* ==========================================
+   ENTRANCE ANIMATION
+========================================== */
+
+@keyframes trust-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1100px) {
   .trust-strip {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1220px;
-    margin: 33px 30px 0;
-    padding-bottom: 30px;
-    gap: 30px;
+    width: calc(100% - 48px);
+    gap: 12px;
   }
-  .trust-strip > div:last-child {
-    display: flex;
+
+  .trust-strip .trust-strip-card {
+    padding: 17px 13px;
+    gap: 11px;
+    min-height: 108px;
   }
-  .trust-strip > div > span {
-    width: 45px;
-    height: 45px;
+
+  .trust-strip .trust-strip-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
   }
-  .trust-strip svg {
-    width: 22px;
+
+  .trust-strip .trust-strip-icon>svg {
+    width: 23px;
+    height: 23px;
   }
-  .trust-strip strong {
-    font-size: var(--small-font-size);
+
+  .trust-strip .trust-strip-content h3 {
+    font-size: 13px;
   }
-  .trust-strip small {
-    font-size: var(--small-font-size);
+
+  .trust-strip .trust-strip-content p {
+    font-size: 12px;
   }
 }
 
-/* Responsive: (min-width: 1320px) */
-@media (min-width: 1320px) {
+/* ==========================================
+   MOBILE — STACKED PREMIUM CARDS
+========================================== */
+
+@media (max-width: 767px) {
   .trust-strip {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+    width: calc(100% - 32px);
+    margin: 20px auto 0;
+
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .trust-strip .trust-strip-card {
+    min-height: 85px;
+    padding: 15px 16px;
+    gap: 14px;
+
+    border-radius: 16px;
+  }
+
+  .trust-strip .trust-strip-card::before {
+    left: 17px;
+    width: 37px;
+  }
+
+  .trust-strip .trust-strip-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .trust-strip .trust-strip-icon>svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .trust-strip .trust-strip-content h3 {
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+
+  .trust-strip .trust-strip-content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .trust-strip .trust-strip-decoration {
+    width: 90px;
+    height: 90px;
+    right: -35px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 359px) {
+  .trust-strip {
+    width: calc(100% - 24px);
+  }
+
+  .trust-strip .trust-strip-card {
+    padding: 13px 12px;
+    gap: 11px;
+  }
+
+  .trust-strip .trust-strip-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .trust-strip .trust-strip-content h3 {
+    font-size: 13px;
+  }
+
+  .trust-strip .trust-strip-content p {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip .trust-strip-card {
+    animation: none;
+    transition: none;
+  }
+
+  .trust-strip .trust-strip-icon,
+  .trust-strip .trust-strip-icon>svg {
+    transition: none;
+  }
+
+  .trust-strip .trust-strip-card:hover,
+  .trust-strip .trust-strip-card:hover .trust-strip-icon,
+  .trust-strip .trust-strip-card:hover .trust-strip-icon>svg {
+    transform: none;
   }
 }

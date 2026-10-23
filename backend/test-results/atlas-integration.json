@@ -1,0 +1,26 @@
+{
+  "database": "excellenthomeoffers_db",
+  "isolatedRun": "d876ef1c-a41f-43f1-8456-9884031aace4",
+  "checks": [
+    "Atlas database connected and pinged",
+    "Registration creates a safe account response",
+    "plumbing_users stores a bcrypt hash",
+    "Duplicate normalized email is rejected",
+    "Second isolated account created for ownership checks",
+    "Project persists with authenticated ownership",
+    "Project exists in plumbing_projects",
+    "Another user cannot read the private project",
+    "Another user cannot change the private project",
+    "Existing quote and progress workflow persists",
+    "Authenticated account loads from database without password data",
+    "Invalid contact submissions are not stored",
+    "Contact saved in plumbing_contacts with trusted source and timestamps",
+    "Logout invalidates private access",
+    "Invalid login is rejected",
+    "Valid login succeeds",
+    "Project and quote survive logout and login"
+  ],
+  "passed": true,
+  "cleanupVerified": true,
+  "protectedCollectionsUnchanged": true
+}

@@ -88,7 +88,7 @@ test("registration validates password and stores a hash", async () => {
   assert.equal(r.body.user.email, "alice@example.com");
   assert.equal(r.body.user.password, undefined);
   assert.notEqual(
-    (await User.findOne({ email: "alice@example.com" })).password,
+    (await User.findOne({ email: "alice@example.com" }).select("+password")).password,
     "a-long-test-password",
   );
   assert.match(r.headers["set-cookie"][0], /HttpOnly/);
