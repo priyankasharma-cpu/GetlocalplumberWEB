@@ -21,7 +21,7 @@
   border-radius: 10px;
 }
 
-.list-card .service-image > img {
+.list-card .service-image>img {
   border-radius: 10px;
 }
 
@@ -58,16 +58,20 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
+
   .list-card .service-image {
     width: 90px;
     height: 95px;
   }
+
   .list-card .service-body {
     padding: 4px 28px 4px 14px;
   }
+
   .list-card .service-body h3 {
     font-size: 16px;
   }
+
   .list-card .service-body p {
     font-size: var(--small-font-size);
     min-height: 0;
@@ -83,12 +87,35 @@
 }
 
 /* Separate links keep calling independent from opening the service details. */
-.service-card.list-card .service-body { padding-right: 0; }
-.service-card.list-card .learn-link { margin-top: 4px; }
-.service-card.list-card .card-actions { margin-top: 0; padding-top: 4px; }
-.service-card.list-card .call-copy strong { font-size: 14px; }
+.service-card.list-card .service-body {
+  padding-right: 0;
+}
+
+.service-card.list-card .learn-link {
+  margin-top: 4px;
+}
+
+.service-card.list-card .card-actions {
+  margin-top: 0;
+  padding-top: 4px;
+}
+
+.service-card.list-card .call-copy strong {
+  font-size: 14px;
+}
+
 @media (max-width: 374px) {
-  .service-card.list-card { align-items: flex-start; }
-  .service-card.list-card .service-image { width: 54px; height: 70px; }
-  .service-card.list-card .call-icon { width: 22px; height: 22px; }
+  .service-card.list-card {
+    align-items: flex-start;
+  }
+
+  .service-card.list-card .service-image {
+    width: 54px;
+    height: 70px;
+  }
+
+  .service-card.list-card .call-icon {
+    width: 22px;
+    height: 22px;
+  }
 }
